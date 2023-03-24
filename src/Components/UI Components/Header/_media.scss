@@ -1,0 +1,17 @@
+@media screen and (max-width: 1060px) {
+    header {
+        .headerInner {
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            grid-column-gap: 50px;
+            .headerLogo {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 950px) {
+    header {
+        display: none;
+    }
+}

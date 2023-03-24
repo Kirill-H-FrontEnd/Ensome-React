@@ -1,0 +1,63 @@
+@import "../../../scss/vars";
+.btnTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba($color: $blue, $alpha: 1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease;
+    transform: scale(0.8, 0.8);
+    z-index: 200;
+    box-shadow: 0px 0px 10px rgba($color: white, $alpha: 0.2);
+    &:hover {
+        box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.6);
+        background-color: white;
+        svg {
+            color: $blue;
+        }
+    }
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1, 1);
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgba($color: $blue, $alpha: 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            animation: pulse 1s ease forwards;
+            transition: all 0.2s ease;
+        }
+    }
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        transition: all 0.2s ease;
+    }
+}
+@keyframes pulse {
+    from {
+        transform: scale(1.1, 1.1);
+    }
+    to {
+        transform: scale(1.6, 1.6);
+        opacity: 0;
+    }
+}
+// ! Media
+@import "media";

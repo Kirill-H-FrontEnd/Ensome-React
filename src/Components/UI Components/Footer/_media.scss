@@ -1,0 +1,108 @@
+@media screen and (max-width: 855px) {
+    .footer {
+        .footerInner {
+            .footerContacts {
+                .footerInfo {
+                    .footerInfoContent {
+                        grid-template-columns: auto;
+                        grid-row-gap: 30px;
+                    }
+                }
+            }
+            .footerCopyright {
+                .footerCopyrightLinks {
+                    grid-column-gap: 50px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        padding-bottom: 30px;
+        .footerInner {
+            .footerLinks {
+                .footerLogo {
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                grid-template-columns: 1fr;
+                border: none;
+                padding: 0;
+                .footerPages {
+                    grid-template-columns: 1fr;
+                    .footerPagesItem {
+                        display: none;
+                    }
+                    .szhAccordion {
+                        display: grid;
+                    }
+                }
+            }
+            .footerContacts {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+                border: none;
+                h3 {
+                    svg {
+                        display: block;
+                    }
+                }
+                .footerInfo {
+                    display: none;
+                }
+                .footerSocial {
+                    padding: 10px 0px 10px 0px;
+                    h3 {
+                        margin: 0;
+                    }
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: start;
+                    align-items: center;
+                    grid-column-gap: 20px;
+                    nav {
+                        grid-column-gap: 15px;
+                    }
+                }
+            }
+            .footerCopyright {
+                grid-template-columns: 1fr;
+                padding: 0;
+                .footerCopyrightLinks {
+                    border-bottom: 2px solid $gray;
+                    padding-bottom: 10px;
+                    grid-column-gap: 30px;
+                    a {
+                        color: $black;
+                        svg {
+                            display: none;
+                        }
+                    }
+                }
+                pre {
+                    padding-top: 10px;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .footer {
+        .footerInner {
+            .footerContacts {
+                margin-bottom: 20px;
+                .footerSocial {
+                    h3 {
+                        padding: 0px 0px 20px 10px;
+                    }
+                    grid-template-columns: auto;
+                    nav {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

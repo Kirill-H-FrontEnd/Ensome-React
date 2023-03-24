@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+    .team-form {
+        .form-inner {
+            grid-template-columns: auto;
+            text-align: center;
+            grid-row-gap: 30px;
+            form {
+                div {
+                    grid-template-columns: auto;
+                }
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .team-form {
+        .form-inner {
+            section {
+                h2 {
+                    font-size: 30px;
+                    line-height: 33px;
+                }
+            }
+        }
+    }
+}

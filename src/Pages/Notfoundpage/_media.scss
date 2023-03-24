@@ -1,0 +1,13 @@
+@media screen and (max-width: 530px) {
+    .NotFoundPage {
+        padding: 100px 0px;
+        .NotFoundPageContent {
+            h1 {
+                font-size: 150px;
+            }
+            h2 {
+                font-size: $title2;
+            }
+        }
+    }
+}

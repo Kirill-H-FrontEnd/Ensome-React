@@ -1,0 +1,59 @@
+.team-form {
+    padding: 100px 0px;
+    background-color: $bgGray;
+    .form-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        section {
+            h2 {
+                font-size: 38px;
+                color: $black;
+                font-weight: 800;
+                line-height: 56px;
+                max-width: 500px;
+            }
+        }
+        form {
+            text-align: right;
+            input {
+                border: none;
+                border-bottom: 2px solid $gray;
+                background: transparent;
+                padding: 10px 0px 10px 0px;
+                width: 100%;
+                margin-bottom: 40px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                &:hover {
+                    border-color: $blue;
+                    &::placeholder {
+                        color: $blue;
+                    }
+                }
+                &:focus {
+                    cursor: auto;
+                    border-color: $blue;
+                    &::placeholder {
+                        transform: translate(20px, 0px);
+                        opacity: 0;
+                    }
+                }
+                &::placeholder {
+                    font-family: $primary;
+                    transition: all 0.2s ease;
+                }
+            }
+            div {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                grid-column-gap: 20px;
+            }
+            button {
+                @extend %button;
+            }
+        }
+    }
+}
+// ! Media
+@import "formMedia";

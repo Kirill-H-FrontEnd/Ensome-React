@@ -1,0 +1,13 @@
+@media screen and (max-width: 530px) {
+    .headerPage {
+        padding: 150px 0px;
+        section {
+            h2 {
+                font-size: $title2;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}

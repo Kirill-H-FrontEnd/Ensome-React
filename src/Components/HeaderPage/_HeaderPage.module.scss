@@ -1,0 +1,45 @@
+@import "../../scss/vars";
+.headerPage {
+    padding: 200px 0px;
+    background-color: $bgGray;
+    section {
+        text-align: center;
+        text-transform: capitalize;
+        h3 {
+            color: $blue;
+            font-family: $secondary;
+            line-height: 1.3;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translate(0px, 30px);
+            animation: headerPage 0.5s ease forwards 0.2s;
+        }
+        h2 {
+            line-height: 1.2;
+            font-size: 46px;
+            font-weight: 800;
+            font-family: $secondary;
+            color: $black;
+            text-align: center;
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translate(0px, 30px);
+            animation: headerPage 0.5s ease forwards 0.4s;
+        }
+    }
+}
+// ! Media
+@import "media";
+// ! Key-Frames
+@keyframes headerPage {
+    from {
+        opacity: 0;
+        transform: translate(0px, 30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}

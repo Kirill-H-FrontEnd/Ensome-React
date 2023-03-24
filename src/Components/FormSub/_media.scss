@@ -1,0 +1,48 @@
+@media screen and (max-width: 1120px) {
+    .subscribeForm {
+        .subscribeInner {
+            text-align: center;
+            grid-template-columns: auto;
+            justify-content: center;
+            section {
+                margin-bottom: 50px;
+            }
+            form {
+                width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .subscribeForm {
+        .subscribeInner {
+            section {
+                margin: 0;
+                h3 {
+                    font-size: $title2;
+                }
+                p {
+                    display: none;
+                }
+            }
+            form {
+                width: 100%;
+                input {
+                    background: transparent;
+                    border: 2px solid white;
+                    margin-bottom: 20px;
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+                button {
+                    position: static;
+                    width: 100%;
+                    padding: 14px 35px 14px 35px;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@media screen and (max-width: 1210px) {
+    .introHomePage {
+        .introInner {
+            justify-content: center;
+            grid-template-columns: auto;
+            section {
+                max-width: 100%;
+                text-align: center;
+                .introButtons {
+                    justify-content: center;
+                }
+            }
+            figure {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 850px) {
+    .introHomePage {
+        .introInner {
+            padding-top: 100px;
+            figure {
+                animation: img 1s ease forwards 0.2s;
+            }
+            section {
+                h1 {
+                    animation: text 1s ease forwards 0.4s;
+                }
+                p {
+                    animation: text 1s ease forwards 0.5s;
+                }
+                .introButtons {
+                    animation: text 1s ease forwards 0.6s;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .introHomePage {
+        height: auto;
+        .introInner {
+            grid-template-columns: auto;
+            grid-row-gap: 30px;
+            padding: 0px 0px 0px 0px;
+            section {
+                grid-row-start: 2;
+                text-align: left;
+                h1 {
+                    font-size: $title2;
+                    line-height: 40px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                .introButtons {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 20px;
+                    a {
+                        text-align: center;
+                        &:nth-of-type(1) {
+                            button {
+                                width: 100%;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            border: 2px solid $blue;
+                            justify-content: center;
+                            border-radius: 6px;
+                            color: $blue;
+                            padding: 12px 0px;
+                            &:hover {
+                                transform: scale(1, 1);
+                                box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.2);
+                            }
+                            svg {
+                                color: $blue;
+                                border-color: $blue;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+            figure {
+                display: block;
+                img {
+                    width: 100%;
+                    height: 0 auto;
+                }
+            }
+        }
+    }
+}

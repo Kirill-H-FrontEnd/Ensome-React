@@ -1,0 +1,44 @@
+@media screen and (max-width: 1024px) {
+    .blogContent {
+        padding: 50px 0px;
+        .blogContentInner {
+            display: grid;
+            grid-template-columns: auto;
+            max-width: 750px;
+            grid-row-gap: 50px;
+            margin: 0 auto;
+            .blogSideBar {
+                grid-row-start: 1;
+                width: 100%;
+                .blogSideBarCategoriesMobil {
+                    display: block;
+                }
+                .blogSideBarCategorisDesctop {
+                    display: none;
+                }
+                .blogSideBarPosts {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .blogContent {
+        .blogContentInner {
+            .blogSideBar {
+                .blogSideBarCategoriesMobil {
+                    .szhAccordion {
+                        .accordion {
+                            h3 {
+                                &:hover {
+                                    background: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+{
+  "team": [
+    {
+      "id": "1",
+      "img": "/src/Images/OurTeamPage/teamImg.jpg",
+      "imgBig": "/src/Images/OurTeamPage/BigImages/teamImgBig.jpg",
+      "name": {
+        "firstname": "John",
+        "lastname": "doe"
+      },
+      "email": "john@gmail.com",
+      "job": "Data analyst",
+      "phone": "1-570-236-7033",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia excepturi enim inventore accusamus atque veritatis obcaecati sed dolor, consequuntur placeat non, repudiandae expedita! Sint, voluptatem repellat velit eum similique, necessitatibus odio aperiam praesentium vitae deleniti eveniet eius iure quo architecto enim reiciendis esse et recusandae ipsa explicabo labore veniam. Molestias."
+    },
+    {
+      "id": "2",
+      "img": "/src/Images/OurTeamPage/teamImg2.jpg",
+      "imgBig": "/src/Images/OurTeamPage/BigImages/teamImgBig2.jpg",
+      "name": {
+        "firstname": "David",
+        "lastname": "morrison"
+      },
+      "email": "morrison@gmail.com",
+      "job": "Data engineer",
+      "phone": "1-570-236-7033",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia excepturi enim inventore accusamus atque veritatis obcaecati sed dolor, consequuntur placeat non, repudiandae expedita! Sint, voluptatem repellat velit eum similique, necessitatibus odio aperiam praesentium vitae deleniti eveniet eius iure quo architecto enim reiciendis esse et recusandae ipsa explicabo labore veniam. Molestias."
+    },
+    {
+      "id": "3",
+      "img": "/src/Images/OurTeamPage/teamImg3.jpg",
+      "imgBig": "/src/Images/OurTeamPage/BigImages/teamImgBig3.jpg",
+      "name": {
+        "firstname": "Kevin",
+        "lastname": "ryan"
+      },
+      "email": "kevin@gmail.com",
+      "job": "Data scientist ",
+      "phone": "1-570-236-7033",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia excepturi enim inventore accusamus atque veritatis obcaecati sed dolor, consequuntur placeat non, repudiandae expedita! Sint, voluptatem repellat velit eum similique, necessitatibus odio aperiam praesentium vitae deleniti eveniet eius iure quo architecto enim reiciendis esse et recusandae ipsa explicabo labore veniam. Molestias."
+    },
+    {
+      "id": "4",
+      "img": "/src/Images/OurTeamPage/teamImg4.jpg",
+      "imgBig": "/src/Images/OurTeamPage/BigImages/teamImgBig4.jpg",
+      "name": {
+        "firstname": "Alen",
+        "lastname": "romer"
+      },
+      "email": "don@gmail.com",
+      "job": "Data engineer",
+      "phone": "1-570-236-7033",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia excepturi enim inventore accusamus atque veritatis obcaecati sed dolor, consequuntur placeat non, repudiandae expedita! Sint, voluptatem repellat velit eum similique, necessitatibus odio aperiam praesentium vitae deleniti eveniet eius iure quo architecto enim reiciendis esse et recusandae ipsa explicabo labore veniam. Molestias."
+    },
+    {
+      "id": "5",
+      "img": "/src/Images/OurTeamPage/teamImg5.jpg",
+      "imgBig": "/src/Images/OurTeamPage/BigImages/teamImgBig5.jpg",
+      "name": {
+        "firstname": "Derek",
+        "lastname": "powell"
+      },
+      "email": "derek@gmail.com",
+      "job": "Data analyst",
+      "phone": "1-570-236-7033",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia excepturi enim inventore accusamus atque veritatis obcaecati sed dolor, consequuntur placeat non, repudiandae expedita! Sint, voluptatem repellat velit eum similique, necessitatibus odio aperiam praesentium vitae deleniti eveniet eius iure quo architecto enim reiciendis esse et recusandae ipsa explicabo labore veniam. Molestias."
+    },
+    {
+      "id": "6",
+      "img": "/src/Images/OurTeamPage/teamImg6.jpg",
+      "imgBig": "/src/Images/OurTeamPage/BigImages/teamImgBig6.jpg",
+      "name": {
+        "firstname": "Veronica",
+        "lastname": "russell"
+      },
+      "email": "david_r@gmail.com",
+      "job": "Data scientist ",
+      "phone": "1-570-236-7033",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia excepturi enim inventore accusamus atque veritatis obcaecati sed dolor, consequuntur placeat non, repudiandae expedita! Sint, voluptatem repellat velit eum similique, necessitatibus odio aperiam praesentium vitae deleniti eveniet eius iure quo architecto enim reiciendis esse et recusandae ipsa explicabo labore veniam. Molestias."
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "1",
+      "title": "Staffing software: key capabilities and top products",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_1.jpg",
+      "rating": {
+        "rate": "3.4"
+      }
+    },
+    {
+      "id": "2",
+      "title": "2022 software development trends explained with benefits",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_2.jpg",
+      "rating": {
+        "rate": "5.6"
+      }
+    },
+    {
+      "id": "3",
+      "title": "White box penetration testing",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_3.jpg",
+      "rating": {
+        "rate": "6.5"
+      }
+    },
+    {
+      "id": "4",
+      "title": "Successful businesses of the future",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_4.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    },
+    {
+      "id": "5",
+      "title": "Data lake vs. data warehouse: why you don’t have to choose",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_4.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    },
+    {
+      "id": "6",
+      "title": "Small business gets big data benefits with 3 data sources",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_3.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    },
+    {
+      "id": "7",
+      "title": "40 stats and real-life examples of how companies use big data",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_2.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Dirty, clean or cleanish: what’s the quality of your big data?",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_1.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    },
+    {
+      "id": "9",
+      "title": "Benefits of telemedicine in nursing homes",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_4.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    },
+    {
+      "id": "10",
+      "title": "Successful businesses of the future",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_3.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    },
+    {
+      "id": "11",
+      "title": "Successful businesses of the future",
+      "description": "The color could be slightly different between on the screen and in practice.  Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Men's Clothing",
+      "image": "/src/Images/BlogPage/PostsBlog/img_2.jpg",
+      "rating": {
+        "rate": "4.2"
+      }
+    }
+  ]
+}

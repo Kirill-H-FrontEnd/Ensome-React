@@ -1,0 +1,38 @@
+@media screen and (max-width: 530px) {
+    .blogHomePage {
+        padding: 50px 0px;
+        .blogInner {
+            .blogHeader {
+                h2 {
+                    font-size: $title2;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .blogHomePage {
+        .blogInner {
+            a {
+                #btn {
+                    width: 100%;
+                }
+            }
+            .blogCards {
+                grid-gap: 0px;
+                .blogCard {
+                    &:hover {
+                        transform: translate(0px, 0px);
+                    }
+                    &.desktop {
+                        display: none;
+                    }
+                }
+                .swiper {
+                    display: block;
+                }
+            }
+        }
+    }
+}

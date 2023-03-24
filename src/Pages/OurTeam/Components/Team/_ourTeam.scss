@@ -1,0 +1,140 @@
+.team--ourTeamPage {
+    padding: 100px 0px;
+    .team-inner {
+        #error-team {
+            text-align: center;
+            opacity: 0;
+            transform: translate(0px, 30px);
+            animation: errorMessAnim2 0.5s ease forwards;
+            h1 {
+                text-align: center;
+                color: #df2e38;
+                font-family: $secondary;
+                text-shadow: 0px 0px 5px rgba($color: #df2e38, $alpha: 0.3);
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            a {
+                color: #93bfcf;
+                font-size: 24px;
+                display: inline-block;
+                transition: all 0.2s ease;
+                &:hover {
+                    transform: rotate(35deg) scale(1.1, 1.1);
+                    color: $blue;
+                }
+            }
+        }
+        .team-header {
+            margin-bottom: 100px;
+            img {
+                width: 100%;
+                height: 0 auto;
+                margin-bottom: 30px;
+            }
+
+            .teamHeader-info {
+                text-align-last: left;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 30px;
+                justify-content: space-between;
+                p {
+                    font-size: 20px;
+                    color: $gray;
+                    line-height: 33px;
+                }
+            }
+        }
+        .team-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 350px);
+            justify-content: center;
+            grid-gap: 30px;
+            #message {
+                position: absolute;
+            }
+            .team-card {
+                text-align: center;
+                transition: all 0.2s ease;
+                opacity: 0;
+                transform: translate(0px, 50px);
+                animation: animationCard 0.5s ease forwards;
+                box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
+                &:nth-of-type(1) {
+                    animation-delay: 0.1s;
+                }
+                &:nth-of-type(2) {
+                    animation-delay: 0.2s;
+                }
+                &:nth-of-type(3) {
+                    animation-delay: 0.3s;
+                }
+                &:nth-of-type(4) {
+                    animation-delay: 0.4s;
+                }
+                &:nth-of-type(5) {
+                    animation-delay: 0.5s;
+                }
+                &:nth-of-type(6) {
+                    animation-delay: 0.6s;
+                }
+                img {
+                    transform: scale(1.1, 1.1);
+                }
+                &:hover {
+                    .teamCard-img {
+                        img {
+                            transform: scale(1.2, 1.2);
+                        }
+                    }
+                }
+                .teamCard-img {
+                    overflow: hidden;
+                    img {
+                        transition: all 1s ease;
+                    }
+                }
+                .teamCard-info {
+                    transition: all 0.4s ease;
+                    background-color: white;
+                    padding: 20px 10px 20px 10px;
+                    h5 {
+                        display: inline-block;
+                        text-transform: capitalize;
+                        font-size: 20px;
+                        color: $black;
+                        font-weight: 700;
+                        font-family: $secondary;
+                        &:nth-of-type(1) {
+                            margin-right: 10px;
+                        }
+                    }
+                    .teamCard-content {
+                        margin-top: 10px;
+                        p {
+                            font-size: 18px;
+                            color: #9497a1;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ! Media
+@import "media";
+// ! KeyFrames
+
+@keyframes errorMessAnim2 {
+    from {
+        opacity: 0;
+        transform: translate(0px, 30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}

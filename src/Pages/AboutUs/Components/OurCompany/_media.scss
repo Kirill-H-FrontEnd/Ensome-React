@@ -1,0 +1,43 @@
+@media screen and (max-width: 1024px) {
+    .ourCompanyAboutUsPage {
+        .ourCompanyInner {
+            .ourCompanyTop,
+            .ourCompanyBottom {
+                justify-content: center;
+                figure {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .ourCompanyAboutUsPage {
+        padding: 50px 0px;
+        .ourCompanyInner {
+            grid-row-gap: 50px;
+            .ourCompanyTop,
+            .ourCompanyBottom {
+                grid-template-columns: auto;
+                grid-row-gap: 30px;
+                section {
+                    h2 {
+                        font-size: $title2;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+                figure {
+                    display: block;
+                }
+            }
+            .ourCompanyBottom {
+                section {
+                    grid-row-start: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@media screen and (max-width: 530px) {
+    .questionsFaqPage {
+        padding: 50px 0px;
+        .questionsContent {
+            .szhAccordion {
+                .accordion {
+                    .accordionHeader {
+                        .accordionBtn {
+                            font-size: 18px;
+                            svg {
+                                display: none;
+                            }
+                        }
+                    }
+                    .accordionContent {
+                        .accordionPanel {
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+    .AutarizahionPage {
+        .AutarizahionInner {
+            grid-template-columns: 1fr;
+            .AutarizahionForms {
+                form {
+                    .btnGoHome {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

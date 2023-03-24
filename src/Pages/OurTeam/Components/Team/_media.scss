@@ -1,0 +1,17 @@
+@media screen and (max-width: 750px) {
+    .team--ourTeamPage {
+        .team-inner {
+            .team-header {
+                .teamHeader-info {
+                    grid-template-columns: auto;
+                    grid-row-gap: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .team--ourTeamPage {
+        padding: 50px 0px;
+    }
+}

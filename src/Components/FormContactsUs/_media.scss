@@ -1,0 +1,36 @@
+@media screen and (max-width: 1120px) {
+    .contactsUsForm {
+        .contactsUsInner {
+            grid-template-columns: 520px;
+            grid-row-gap: 100px;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .contactsUsForm {
+        .contactsUsInner {
+            grid-template-columns: auto;
+            section {
+                a {
+                    display: grid;
+                }
+            }
+            form {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .contactsUsForm {
+        padding: 50px 0px;
+        .contactsUsInner {
+            section {
+                h4 {
+                    font-size: $title2;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}

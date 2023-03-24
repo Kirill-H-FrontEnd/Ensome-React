@@ -1,0 +1,87 @@
+@import "../../../../scss/vars";
+.aboutHomePage {
+    padding: 100px 0px;
+    .aboutInner {
+        display: grid;
+        grid-row-gap: 50px;
+        .btn {
+            @extend %button;
+        }
+        .aboutTop,
+        .aboutBottom {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            align-items: center;
+            grid-column-gap: 50px;
+            &.active {
+                section {
+                    h2 {
+                        animation: animationText 0.5s ease forwards;
+                    }
+                    p {
+                        animation: animationText 0.5s ease forwards 0.2s;
+                    }
+                    a {
+                        button {
+                            animation: animationText 0.5s ease forwards 0.4s;
+                        }
+                    }
+                }
+                figure {
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+            section {
+                max-width: 540px;
+                h2 {
+                    font-size: $title1;
+                    color: $black;
+                    font-family: $secondary;
+                    font-weight: 800;
+                    line-height: 60px;
+                    margin-bottom: 30px;
+                    opacity: 0;
+                    transform: translate(0px, 50px);
+                }
+                p {
+                    font-size: $text;
+                    color: $gray;
+                    line-height: 33px;
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                    opacity: 0;
+                    transform: translate(0px, 50px);
+                }
+                a {
+                    button {
+                        opacity: 0;
+                        transform: translate(0px, 50px);
+                    }
+                }
+            }
+            figure {
+                img {
+                    width: 100%;
+                    height: 0 auto;
+                    opacity: 0;
+                    transition: all 2s ease;
+                }
+            }
+        }
+    }
+}
+// ! Media
+@import "media";
+// ! KeyFrames
+@keyframes animationText {
+    from {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 00px);
+    }
+}

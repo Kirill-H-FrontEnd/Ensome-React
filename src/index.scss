@@ -1,0 +1,61 @@
+@import "scss/vars";
+@import "scss/reset";
+html {
+    * {
+        font-family: $primary;
+    }
+    // Erro,succ messages
+    #message {
+        position: absolute;
+        button {
+            margin-left: 5px;
+            border: none;
+            background-color: rgba($color: $bgGray, $alpha: 0.4);
+            color: $black;
+            border-radius: 6px;
+            padding: 5px 10px;
+            transition: all 0.2s ease;
+            box-shadow: 0px 0px 4px rgba($color: $gray, $alpha: 0.2);
+            &:hover {
+                background-color: rgba($color: $bgGray, $alpha: 1);
+                box-shadow: 0px 0px 4px rgba($color: $gray, $alpha: 0.4);
+            }
+        }
+    }
+    body {
+        &.hidden {
+            overflow: hidden;
+        }
+        .box {
+            width: min(100% - 20px, 1240px);
+            margin-inline: auto;
+        }
+        #wrapper {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+        // Scroll-bar
+        &::-webkit-scrollbar {
+            background-color: #fff;
+            width: 12px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($color: $blue, $alpha: 1);
+            border-radius: 10px;
+            border: 3px solid #fff;
+        }
+        main {
+            // ! OurTeamPage
+            // Team
+            @import "Pages/OurTeam/Components/Team/ourTeam";
+            // ! TeamCardPage
+            // Card
+            @import "Pages/TeamCard/teamCard";
+            // Form
+            @import "Pages/TeamCard/Components/Form/teamForm";
+            // TodoAppPage
+            @import "Pages/TodoApp/TodoApp";
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@media screen and (max-width: 1024px) {
+    .cardsSolutionsPage {
+        .cardsInner {
+            grid-template-columns: auto;
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+    .cardsSolutionsPage {
+        padding: 50px 0px;
+    }
+}
