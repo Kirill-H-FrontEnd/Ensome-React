@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
     { value: "Contacts", href: "Contacts", key: "6" },
   ];
   const dropLinksItems = [
-    { value: "Home", href: "/" },
+    { value: "OurTeam", href: "/OurTeam" },
     { value: "Solutions", href: "Solutions" },
     { value: "About us", href: "AboutUs" },
     { value: "Blog", href: "Blog" },

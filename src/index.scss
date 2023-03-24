@@ -46,9 +46,6 @@ html {
             border: 3px solid #fff;
         }
         main {
-            // ! OurTeamPage
-            // Team
-            @import "Pages/OurTeam/Components/Team/ourTeam";
             // ! TeamCardPage
             // Card
             @import "Pages/TeamCard/teamCard";

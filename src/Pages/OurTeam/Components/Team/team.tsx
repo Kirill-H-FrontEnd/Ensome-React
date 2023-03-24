@@ -1,3 +1,6 @@
+// Styles
+import s from "./_OurTeam.module.scss";
+// Toast
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 // Hooks
@@ -60,12 +63,12 @@ function Team() {
   }, []);
 
   return (
-    <section className="team--ourTeamPage">
+    <section className={s.teamOurTeamPage}>
       <div className="box">
-        <section className="team-inner">
-          <section className="team-header">
+        <section className={s.teamInner}>
+          <section className={s.teamHeader}>
             <img src={Header} alt="" />
-            <section className="teamHeader-info">
+            <section className={s.teamHeaderInfo}>
               <p>
                 Phasellus tristique eu nisl eu consectetur. Morbi urna massa,
                 imperdiet in mauris et, euismod vestibulum lacus. Integer enim
@@ -82,15 +85,15 @@ function Team() {
           </section>
           <div style={{ textAlign: "center" }}>{loader && <Loader />}</div>
           {isError && (
-            <div id="error-team">
+            <div className={s.errorTeam}>
               <h1>Data error! data not received, try reloading the page</h1>
               <a href="">
                 <FontAwesomeIcon icon={faArrowsRotate} />
               </a>
             </div>
           )}
-          <div className="team-cards">
-            <div id="message">
+          <div className={s.teamCards}>
+            <div className={s.message}>
               <Toaster position="bottom-center" reverseOrder={false} />
             </div>
             {card.map((card) => (

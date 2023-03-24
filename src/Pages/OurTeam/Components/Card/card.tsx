@@ -1,3 +1,5 @@
+// Styles
+import s from "../Team/_OurTeam.module.scss";
 // Router
 import { Link } from "react-router-dom";
 // Model
@@ -10,15 +12,15 @@ function Card({ card }: TeamCard) {
   return (
     <Link
       to={`/OurTeam/${card.id}/${card.name.firstname}`}
-      className="team-card"
+      className={s.teamCard}
     >
-      <div className="teamCard-img">
+      <div className={s.teamCardImg}>
         <img src={card.img} alt="" />
       </div>
-      <div className="teamCard-info">
+      <div className={s.teamCardInfo}>
         <h5>{card.name.firstname}</h5>
         <h5>{card.name.lastname}</h5>
-        <div className="teamCard-content">
+        <div className={s.teamCardContent}>
           <p>{card.job}</p>
         </div>
       </div>
