@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
-    .team-form {
-        .form-inner {
+    .teamForm {
+        .formInner {
             grid-template-columns: auto;
             text-align: center;
             grid-row-gap: 30px;
@@ -16,8 +16,8 @@
     }
 }
 @media screen and (max-width: 530px) {
-    .team-form {
-        .form-inner {
+    .teamForm {
+        .formInner {
             section {
                 h2 {
                     font-size: 30px;

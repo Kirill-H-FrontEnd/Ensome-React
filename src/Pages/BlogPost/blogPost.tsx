@@ -1,5 +1,5 @@
 // Styles
-import s from "./_BlogPost.module.scss";
+import s from "./BlogPost.module.scss";
 // Axios
 import axios from "axios";
 // Hooks

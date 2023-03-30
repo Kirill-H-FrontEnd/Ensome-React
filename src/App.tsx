@@ -1,18 +1,23 @@
+// Styles
+import "./index.scss";
+import "atropos/css";
+// Router
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Logout } from "./Components/Logout";
-import { Home } from "./Pages/Home/Home";
-import { Services } from "./Pages/Services/Services";
-import { AboutUs } from "./Pages/AboutUs/aboutUs";
-import { Blog } from "./Pages/Blog/blog";
+// Pages
+import { Logout } from "Components/Logout";
+import { Home } from "Pages/Home/Home";
+import { Services } from "Pages/Services/Services";
+import { AboutUs } from "Pages/AboutUs/aboutUs";
+import { Blog } from "Pages/Blog/blog";
 import { BlogPost } from "Pages/BlogPost/blogPost";
-import { Contacts } from "./Pages/Contacts/Contacts";
-import { OurTeam } from "./Pages/OurTeam/OurTeam";
-import { TeamCard } from "./Pages/TeamCard/teamCard";
-import { FAQ } from "./Pages/FAQ/FAQ";
-import { Solutions } from "./Pages/Solutions/Solutions";
-import { Notfoundpage } from "./Pages/Notfoundpage/Notfoundpage";
-import { Autorizahion } from "./Pages/Autorizahion/Autorizahion";
-import { useScrollTop } from "./Hooks/useScrollTop";
+import { Contacts } from "Pages/Contacts/Contacts";
+import { OurTeam } from "Pages/OurTeam/OurTeam";
+import { TeamCard } from "Pages/TeamCard/teamCard";
+import { FAQ } from "Pages/FAQ/FAQ";
+import { Solutions } from "Pages/Solutions/Solutions";
+import { Notfoundpage } from "Pages/Notfoundpage/Notfoundpage";
+import { Autorizahion } from "Pages/Autorizahion/Autorizahion";
+import { useScrollTop } from "Hooks/useScrollTop";
 import { TodoApp } from "Pages/TodoApp/TodoApp";
 import { useEffect } from "react";
 

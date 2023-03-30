@@ -22,7 +22,7 @@
       "Hok/*":["hok/*"],
       "Hooks/*":["Hooks/*"],
       "Images/*":["Images/*"],
-      "Moidels/*":["Models/*"],
+      "Models/*":["Models/*"],
       "Pages/*":["Pages/*"]
     }
   },

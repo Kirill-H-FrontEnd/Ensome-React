@@ -1,0 +1,103 @@
+@import "../../scss/vars";
+.subscribeForm {
+    padding: 70px 0px;
+    background-color: $blue;
+    .subscribeInner {
+        display: grid;
+        grid-template-columns: 520px 450px;
+        justify-content: center;
+        grid-column-gap: 100px;
+        align-items: center;
+        &.active {
+            section {
+                h3 {
+                    animation: animationText 0.5s ease forwards;
+                }
+                p {
+                    animation: animationText 0.5s ease forwards 0.2s;
+                }
+            }
+            form {
+                opacity: 1;
+            }
+        }
+        section {
+            h3 {
+                font-size: 38px;
+                color: white;
+                font-weight: 800;
+                font-family: $secondary;
+                margin-bottom: 25px;
+                opacity: 0;
+                transform: translate(0px, 50px);
+            }
+            p {
+                font-size: $text;
+                color: white;
+                line-height: 33px;
+                font-weight: 400;
+                opacity: 0;
+                transform: translate(0px, 50px);
+            }
+        }
+        form {
+            position: relative;
+            opacity: 0;
+            transition: all 0.6s ease;
+            input {
+                width: 100%;
+                text-transform: capitalize;
+                border: none;
+                background-color: #c9dcec;
+                padding: 13px 0px 13px 10px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-family: $secondary;
+                transition: all 0.2s ease;
+                &::placeholder {
+                    color: $black;
+                    font-size: 14px;
+                    font-weight: 700;
+                    font-family: $secondary;
+                    letter-spacing: 1px;
+                    transition: all 0.2s ease;
+                }
+                &:hover {
+                    box-shadow: 0px 0px 10px rgba($color: #c9dcec, $alpha: 0.3);
+                }
+                &:focus {
+                    &::placeholder {
+                        transform: translate(30px, 0px);
+                        opacity: 0;
+                    }
+                }
+            }
+            button {
+                color: $black;
+                font-family: $secondary;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: none;
+                outline: none;
+                padding: 11px 35px 11px 35px;
+                border-radius: 6px;
+                background-color: white;
+                transition: all 0.2s ease;
+            }
+        }
+    }
+}
+// ! Media
+@import "media.scss";
+// KeyFrames
+@keyframes animationText {
+    from {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}

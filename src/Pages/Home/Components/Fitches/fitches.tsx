@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Fitches.module.scss";
+import s from "./Fitches.module.scss";
 // import Atropos component
 import Atropos from "atropos/react";
 // Swiper
@@ -20,19 +20,16 @@ export const Fitches: React.FC = () => {
       icon: icon1,
       title: "Embed analytics",
       p: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
-      key: "1",
     },
     {
       icon: icon2,
       title: "Machine learning",
       p: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
-      key: "2",
     },
     {
       icon: icon3,
       title: "Access control",
       p: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
-      key: "3",
     },
   ];
 
@@ -53,9 +50,9 @@ export const Fitches: React.FC = () => {
               </p>
             </section>
             <section className={s.fitchesCards}>
-              {fitchesCards.map((card) => (
+              {fitchesCards.map((card, i) => (
                 <Atropos
-                  key={card.key}
+                  key={i}
                   shadow={false}
                   className={`${s.atropos} animate`}
                 >
@@ -76,8 +73,8 @@ export const Fitches: React.FC = () => {
                   bulletClass: `swiper-pagination-bullet ${s.swiper_pagination_bullet}`,
                 }}
               >
-                {fitchesCards.map((card) => (
-                  <SwiperSlide key={card.key}>
+                {fitchesCards.map((card, i) => (
+                  <SwiperSlide key={i}>
                     <div className={`${s.fitchesCard} animate`}>
                       <img src={card.icon} alt="" />
                       <h3>{card.title}</h3>

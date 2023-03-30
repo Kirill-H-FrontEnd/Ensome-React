@@ -1,0 +1,130 @@
+@import "../../../../scss/vars";
+.formContactsPage {
+    padding: 100px 0px;
+    .formInner {
+        .formContent {
+            display: grid;
+            grid-template-columns: 500px 600px;
+            justify-content: space-between;
+            section {
+                h2 {
+                    font-size: 80px;
+                    line-height: 88px;
+                    font-family: $secondary;
+                    font-weight: 800;
+                    margin-bottom: 30px;
+                    span {
+                        color: $blue;
+                    }
+                }
+                .formInfo {
+                    display: grid;
+                    justify-content: start;
+                    grid-row-gap: 30px;
+                    .formInfoItem {
+                        display: grid;
+                        grid-row-gap: 10px;
+                        h5 {
+                            color: $black;
+                            font-size: 14px;
+                            font-family: $secondary;
+                            font-weight: 600;
+                            svg {
+                                margin-right: 10px;
+                            }
+                        }
+                        pre {
+                            color: $gray;
+                            font-family: $primary;
+                        }
+                    }
+                }
+            }
+            form {
+                width: 100%;
+                text-align: right;
+                div {
+                    display: grid;
+                    grid-template-columns: repeat(2, auto);
+                    grid-column-gap: 20px;
+                }
+                input {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    border: 2px solid $gray;
+                    border-radius: 6px;
+                    padding: 14px 0px 14px 10px;
+                    cursor: pointer;
+                    transition: all 0.1s ease;
+                    &:focus {
+                        box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.3);
+                        border-color: $blue;
+                        &::placeholder {
+                            transform: translate(20px, 0px);
+                            opacity: 0;
+                        }
+                    }
+                    &:hover {
+                        box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.3);
+                        border-color: $blue;
+                    }
+                    &::placeholder {
+                        font-family: $primary;
+                        font-size: 14px;
+                        color: $black;
+                        font-weight: 600;
+                        transition: all 0.2s ease;
+                    }
+                }
+                textarea {
+                    border: 2px solid $gray;
+                    overflow-x: hidden;
+                    border-radius: 6px;
+                    width: 100%;
+                    padding: 14px 0px 0px 10px;
+                    transition: all 0.2s ease;
+                    min-height: 50px;
+                    max-height: 200px;
+                    font-family: $primary;
+                    cursor: pointer;
+                    &:focus {
+                        box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.3);
+                        border-color: $blue;
+                        &::placeholder {
+                            transform: translate(20px, 0px);
+                            opacity: 0;
+                        }
+                    }
+                    &:hover {
+                        box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.3);
+                        border-color: $blue;
+                    }
+                    &::placeholder {
+                        font-size: 14px;
+                        color: $black;
+                        font-weight: 600;
+                        transition: all 0.2s ease;
+                    }
+                }
+                button {
+                    background-color: $blue;
+                    font-family: $secondary;
+                    color: white;
+                    font-size: 14px;
+                    border-radius: 6px;
+                    padding: 12px 50px;
+                    border: none;
+                    margin-top: 20px;
+                    transition: all 0.2s ease;
+                    &:hover {
+                        background-color: white;
+                        color: $blue;
+                        box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+// ! Media
+@import "media.scss";

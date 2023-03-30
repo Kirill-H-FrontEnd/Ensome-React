@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Loader.module.scss";
+import s from "./Loader.module.scss";
 
 export const Loader: React.FC = () => {
   return (

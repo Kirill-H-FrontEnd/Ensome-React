@@ -1,5 +1,5 @@
 // Styles
-import s from "../Team/_OurTeam.module.scss";
+import s from "../Team/OurTeam.module.scss";
 // Router
 import { Link } from "react-router-dom";
 // Model

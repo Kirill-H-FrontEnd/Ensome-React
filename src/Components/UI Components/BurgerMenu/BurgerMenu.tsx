@@ -1,6 +1,6 @@
 import React, { SetStateAction } from "react";
 // Sttyles
-import s from "./_BurgerMenu.module.scss";
+import s from "./BurgerMenu.module.scss";
 
 interface IBurgerMenuProps {
   activeBurger: boolean;

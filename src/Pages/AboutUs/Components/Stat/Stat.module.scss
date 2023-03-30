@@ -1,0 +1,44 @@
+@import "../../../../scss/vars";
+.statAboutUsPage {
+    background-color: $bgGray;
+    padding: 70px 0px;
+    .statInner {
+        display: grid;
+        grid-row-gap: 50px;
+        .statHeader {
+            text-align: center;
+            h2 {
+                color: $black;
+                font-family: $secondary;
+                font-weight: 800;
+                font-size: $title1;
+            }
+        }
+        .statItems {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 255px);
+            justify-content: center;
+            text-align: center;
+            grid-row-gap: 50px;
+            .statItem {
+                border-right: 2px solid rgba($color: #c9dcec, $alpha: 1);
+                &:nth-of-type(4) {
+                    border: none;
+                }
+                h3 {
+                    color: $blue;
+                    font-size: 56px;
+                    font-weight: 800;
+                    margin-bottom: 20px;
+                }
+                pre {
+                    color: $gray;
+                    font-weight: 600;
+                    font-family: $primary;
+                }
+            }
+        }
+    }
+}
+// ! Media
+@import "media.scss";

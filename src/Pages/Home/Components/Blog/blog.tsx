@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Blog.module.scss";
+import s from "./Blog.module.scss";
 // import Atropos component
 import Atropos from "atropos/react";
 // Button
@@ -23,7 +23,6 @@ export const Blog: React.FC = () => {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti... ",
       btn1: "Proxy",
       btn2: "VPN",
-      key: "1",
     },
     {
       date: "22 June 2020",
@@ -31,7 +30,6 @@ export const Blog: React.FC = () => {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti... ",
       btn1: "Proxy",
       btn2: "VPN",
-      key: "2",
     },
     {
       date: "22 June 2020",
@@ -39,7 +37,6 @@ export const Blog: React.FC = () => {
       text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti... ",
       btn1: "Proxy",
       btn2: "VPN",
-      key: "3",
     },
   ];
   return (
@@ -51,9 +48,9 @@ export const Blog: React.FC = () => {
               <h2>Glad to help your success</h2>
             </section>
             <section className={s.blogCards}>
-              {blogCard.map((card) => (
+              {blogCard.map((card, i) => (
                 <Atropos
-                  key={card.key}
+                  key={i}
                   shadow={false}
                   className={`${s.atropos} animate`}
                 >
@@ -78,8 +75,8 @@ export const Blog: React.FC = () => {
                   bulletClass: `swiper-pagination-bullet ${s.swiper_pagination_bullet}`,
                 }}
               >
-                {blogCard.map((card) => (
-                  <SwiperSlide key={card.key}>
+                {blogCard.map((card, i) => (
+                  <SwiperSlide key={i}>
                     <div className={`${s.blogCard} animate`}>
                       <pre>{card.date}</pre>
                       <h3>{card.title}</h3>

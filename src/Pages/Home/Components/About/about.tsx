@@ -1,5 +1,5 @@
 // Styles
-import s from "./_About.module.scss";
+import s from "./About.module.scss";
 // import Atropos component
 import Atropos from "atropos/react";
 import Button from "@mui/material/Button";

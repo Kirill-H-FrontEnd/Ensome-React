@@ -190,5 +190,31 @@
         "rate": "4.2"
       }
     }
+  ],
+  "popularPosts": [
+    {
+      "id": "1",
+      "title": "Staffing software: key capabilities and top products",
+      "img": "/src/Images/BlogPage/SideBarPosts/img_1.jpg",
+      "date": "20 June 2022"
+    },
+    {
+      "id": "2",
+      "title": "2022 software development trends explained with benefits",
+      "img": "/src/Images/BlogPage/SideBarPosts/img_2.jpg",
+      "date": "20 June 2022"
+    },
+    {
+      "id": "3",
+      "title": "White box penetration testing",
+      "img": "/src/Images/BlogPage/SideBarPosts/img_3.jpg",
+      "date": "20 June 2022"
+    },
+    {
+      "id": "4",
+      "title": "Successful businesses of the future",
+      "img": "/src/Images/BlogPage/SideBarPosts/img_4.jpg",
+      "date": "20 June 2022"
+    }
   ]
 }

@@ -1,5 +1,5 @@
 // Styles
-import s from "./_FormSub.module.scss";
+import s from "./FormSub.module.scss";
 import Button from "@mui/material/Button";
 import { useAnimate } from "Hooks/useAnimate";
 export const FormSub: React.FC = () => {

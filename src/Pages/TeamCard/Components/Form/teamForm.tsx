@@ -1,14 +1,15 @@
+// Styles
+import s from "./_TeamForm.module.scss";
 // Button
 import Button from "@mui/material/Button";
-
 interface ITeamName {
   name: string | undefined;
 }
 export const TeamForm: React.FC<ITeamName> = ({ name }) => {
   return (
-    <section className="team-form">
+    <section className={s.teamForm}>
       <div className="box">
-        <section className="form-inner">
+        <section className={s.formInner}>
           <section>
             <h2>Want to {name} share his expertise with you?</h2>
           </section>

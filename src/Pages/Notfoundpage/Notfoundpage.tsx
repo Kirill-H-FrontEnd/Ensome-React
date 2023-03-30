@@ -1,5 +1,5 @@
 // Styles
-import s from "./_NotFoundPage.module.scss";
+import s from "./NotFoundPage.module.scss";
 // Router
 import { Link } from "react-router-dom";
 

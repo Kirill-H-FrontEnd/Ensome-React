@@ -1,5 +1,5 @@
 // Styles
-import s from "./_OurTeam.module.scss";
+import s from "./OurTeam.module.scss";
 // Toast
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
@@ -18,27 +18,9 @@ import { faArrowsRotate, faClose } from "@fortawesome/free-solid-svg-icons";
 function Team() {
   // Messages
   const succ = () =>
-    toast.success(
-      <span>
-        Team received!
-        <button onClick={() => toast.dismiss()}>
-          {" "}
-          <FontAwesomeIcon icon={faClose} />
-        </button>
-      </span>,
-      { duration: 3000 }
-    );
+    toast.success(<span>Team received!</span>, { duration: 3000 });
   const err = () =>
-    toast.error(
-      <span>
-        Error! Data not received...
-        <button onClick={() => toast.dismiss()}>
-          {" "}
-          <FontAwesomeIcon icon={faClose} />
-        </button>
-      </span>,
-      { duration: 3000 }
-    );
+    toast.error(<span>Error! Data not received...</span>, { duration: 3000 });
 
   const [card, setCard] = useState<ICardTeam[]>([]);
   const [loader, setLoader] = useState(false);

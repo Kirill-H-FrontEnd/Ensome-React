@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Header.module.scss";
+import s from "./Header.module.scss";
 // Button
 import Button from "@mui/material/Button";
 // Router
@@ -24,10 +24,10 @@ export const Header: React.FC = () => {
   });
   // Arrays links
   const navLinks = [
-    { value: "Home", href: "/", key: "1" },
-    { value: "Solutions", href: "Solutions", key: "2" },
-    { value: "Blog", href: "Blog", key: "5" },
-    { value: "Contacts", href: "Contacts", key: "6" },
+    { value: "Home", href: "/" },
+    { value: "Solutions", href: "Solutions" },
+    { value: "Blog", href: "Blog" },
+    { value: "Contacts", href: "Contacts" },
   ];
   const dropLinksItems = [
     { value: "OurTeam", href: "/OurTeam" },
@@ -50,10 +50,10 @@ export const Header: React.FC = () => {
                 <img src={Logo} alt="" />
               </Link>
               <nav>
-                {navLinks.map((link) => (
+                {navLinks.map((link, i) => (
                   <NavLink
                     className={({ isActive }) => (isActive ? s.active : "")}
-                    key={link.key}
+                    key={i}
                     to={link.href}
                   >
                     {link.value}

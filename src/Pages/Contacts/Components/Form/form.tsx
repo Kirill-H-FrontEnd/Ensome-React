@@ -1,5 +1,5 @@
 // Styles
-import s from "./_FormConatcts.module.scss";
+import s from "./FormConatcts.module.scss";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,19 +15,16 @@ export const Form: React.FC = () => {
       title: "Email",
       value: "ensome@info.co.us",
       icon: faEnvelope,
-      key: "1",
     },
     {
       title: "Phone",
       value: "+1 601-201-5580",
       icon: faPhone,
-      key: "2",
     },
     {
       title: "Address",
       value: "1642 Washington Ave, Jackson, MS",
       icon: faLocationArrow,
-      key: "3",
     },
   ];
   return (
@@ -41,8 +38,8 @@ export const Form: React.FC = () => {
                   How can we <span>help you?</span>
                 </h2>
                 <div className={s.formInfo}>
-                  {formInfoItems.map((item) => (
-                    <div key={item.key} className={s.formInfoItem}>
+                  {formInfoItems.map((item, i) => (
+                    <div key={i} className={s.formInfoItem}>
                       <h5>
                         <FontAwesomeIcon icon={item.icon} />
                         {item.title}

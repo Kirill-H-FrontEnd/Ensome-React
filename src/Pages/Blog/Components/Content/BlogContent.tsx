@@ -1,5 +1,5 @@
 // Styles
-import s from "./_BlogContent.module.scss";
+import s from "./BlogContent.module.scss";
 // Toast(Mess)
 import toast, { Toaster } from "react-hot-toast";
 // Axios
@@ -9,11 +9,12 @@ import { useEffect, useState } from "react";
 // Components
 import { IPost } from "Models/postBlog";
 import { Loader } from "Components/Loader/Loader";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import { Post } from "../Post/Post";
+import { PopularPost } from "../PopularPost/PopularPost";
 // FontEwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faClose,
   faArrowsRotate,
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
@@ -39,8 +40,8 @@ const AccordionItem = ({ ...rest }) => (
     panelProps={{ className: s.accordionPanel }}
   />
 );
-// Data
-import { popularPosts } from "Data/popularPost";
+// Models
+import { IPopularPost } from "Models/popularPost";
 
 export const BlogContent: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -51,18 +52,10 @@ export const BlogContent: React.FC = () => {
       duration: 3000,
     });
   const err = () =>
-    toast.error(
-      <span>
-        Error! Data not received...
-        <button onClick={() => toast.dismiss()}>
-          {" "}
-          <FontAwesomeIcon icon={faClose} />
-        </button>
-      </span>,
-      { duration: 3000 }
-    );
+    toast.error(<span>Error! Data not received...</span>, { duration: 3000 });
   // ----
-  const [posts, setPosts] = useState<IPost[]>([]);
+  const [post, setPost] = useState<IPost[]>([]);
+  const [popularPost, setPopularPost] = useState<IPopularPost[]>([]);
   const [loader, setLoader] = useState(false);
   const [isError, setError] = useState(false);
   const [pageQty, setPageQty] = useState(0); // impossible
@@ -73,8 +66,9 @@ export const BlogContent: React.FC = () => {
       const resp = await axios.get<IPost[]>(
         `http://localhost:3001/blogPosts?title_like${postQuery}&_limit=3&_page=${page}`
       );
-      setPosts(resp.data);
+      setPost(resp.data);
       succ();
+      console.log(resp);
       setLoader(false);
     } catch (e: unknown) {
       err();
@@ -82,9 +76,23 @@ export const BlogContent: React.FC = () => {
       setError(true);
     }
   };
+  const fetchDataPopularPosts = async () => {
+    try {
+      setLoader(true);
+      const resp = await axios.get<IPopularPost[]>(
+        `http://localhost:3001/popularPosts`
+      );
+      setPopularPost(resp.data);
+      setLoader(false);
+    } catch (e: unknown) {
+      setLoader(false);
+      setError(true);
+    }
+  };
   useEffect(() => {
     fetchDataPosts();
-  }, [postQuery, page]);
+    fetchDataPopularPosts();
+  }, [page, postQuery]);
   // Change pages pagination
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     useScrollTopSmooth();
@@ -108,7 +116,6 @@ export const BlogContent: React.FC = () => {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "1",
     },
     {
       title: "Embed analytics",
@@ -117,7 +124,6 @@ export const BlogContent: React.FC = () => {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "2",
     },
     {
       title: "Data analytics",
@@ -126,7 +132,6 @@ export const BlogContent: React.FC = () => {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "3",
     },
     {
       title: "Big data consulting",
@@ -135,7 +140,6 @@ export const BlogContent: React.FC = () => {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "4",
     },
     {
       title: "Artificial intelligence",
@@ -144,24 +148,23 @@ export const BlogContent: React.FC = () => {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "5",
     },
   ];
   const blogTags = [
-    { value: "All topics", key: "1" },
-    { value: "App", key: "2" },
-    { value: "Management", key: "3" },
-    { value: "CMR", key: "4" },
-    { value: "Big data", key: "5" },
-    { value: "Media", key: "6" },
-    { value: "Future", key: "7" },
-    { value: "CIO", key: "8" },
-    { value: "Startup", key: "9" },
-    { value: "Team", key: "10" },
-    { value: "Data", key: "11" },
-    { value: "Data analytics", key: "12" },
-    { value: "Information security", key: "13" },
-    { value: "Proxy", key: "14" },
+    { value: "All topics" },
+    { value: "App" },
+    { value: "Management" },
+    { value: "CMR" },
+    { value: "Big data" },
+    { value: "Media" },
+    { value: "Future" },
+    { value: "CIO" },
+    { value: "Startup" },
+    { value: "Team" },
+    { value: "Data" },
+    { value: "Data analytics" },
+    { value: "Information security" },
+    { value: "Proxy" },
   ];
   return (
     <>
@@ -185,19 +188,10 @@ export const BlogContent: React.FC = () => {
                   </a>
                 </span>
               )}
-              {posts
+              {post
                 .filter((post) => post.title.includes(postQuery))
                 .map((post) => (
-                  <div className={s.blogPostsItem} key={post.id}>
-                    <img src={post.image} alt="" />
-                    <div className={s.blogPostsInfo}>
-                      <pre>22 June 2022</pre>
-                      <h5>{post.title}</h5>
-                      <p>{post.description}</p>
-                      <strong>Rate: {post.rating.rate}</strong>
-                      <Link to={`/Blog/${post.id}`}>Read more</Link>
-                    </div>
-                  </div>
+                  <Post key={post.id} post={post} />
                 ))}
               <Pagination
                 onChange={handleChange}
@@ -241,15 +235,8 @@ export const BlogContent: React.FC = () => {
               </div>
               <div className={s.blogSideBarPosts}>
                 <h4>Popular posts</h4>
-                {popularPosts.map((post) => (
-                  <div className={s.blogSideBarPostsItem} key={post.id}>
-                    <img src={post.img} alt="" />
-                    <div className={s.blogSideBarPostsInfo}>
-                      <pre>{post.date}</pre>
-                      <h5>{post.title}</h5>
-                      <Link to="/blog">Read more</Link>
-                    </div>
-                  </div>
+                {popularPost.map((post) => (
+                  <PopularPost key={post.id} post={post} />
                 ))}
               </div>
               <div className={s.blogSideBarCategorisDesctop}>
@@ -259,9 +246,9 @@ export const BlogContent: React.FC = () => {
                   transition
                   transitionTimeout={200}
                 >
-                  {acardionBlogItems.map((slide) => (
+                  {acardionBlogItems.map((slide, i) => (
                     <AccordionItem
-                      key={slide.key}
+                      key={i}
                       header={
                         <>
                           {slide.title}
@@ -281,8 +268,8 @@ export const BlogContent: React.FC = () => {
               <div className={s.blogSideBarTags}>
                 <h4>Tags</h4>
                 <div className={s.tagsItems}>
-                  {blogTags.map((tag) => (
-                    <div key={tag.key}>{tag.value}</div>
+                  {blogTags.map((tag, i) => (
+                    <div key={i}>{tag.value}</div>
                   ))}
                 </div>
               </div>

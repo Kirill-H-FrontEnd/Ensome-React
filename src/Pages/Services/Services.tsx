@@ -7,7 +7,7 @@ import { HeaderPage } from "Components/HeaderPage/HeaderPage";
 function Services() {
   return (
     <>
-      <HeaderPage title={"Data Analytics Services"} supTitle={"Services"} />/
+      <HeaderPage title={"Data Analytics Services"} supTitle={"Services"} />
       <ContentServices />
       <Stat />
       <FormContactsUs />

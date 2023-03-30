@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Slider.module.scss";
+import s from "./Slider.module.scss";
 // Swiper
 import { Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +14,6 @@ export const Slider: React.FC = () => {
   useAnimate(s.active);
   const sliderSlideItems = [
     {
-      key: "1",
       photo1: photo1,
       photo2: photo2,
       text: "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
@@ -23,7 +22,6 @@ export const Slider: React.FC = () => {
       proff2: "CEO by NOX",
     },
     {
-      key: "2",
       photo1: photo1,
       photo2: photo2,
       text: "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
@@ -32,7 +30,6 @@ export const Slider: React.FC = () => {
       proff2: "CEO by NOX",
     },
     {
-      key: "3",
       photo1: photo1,
       photo2: photo2,
       text: "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
@@ -59,8 +56,8 @@ export const Slider: React.FC = () => {
                   bulletClass: `swiper-pagination-bullet ${s.swiper_pagination_bullet}`,
                 }}
               >
-                {sliderSlideItems.map((slide) => (
-                  <SwiperSlide key={slide.key}>
+                {sliderSlideItems.map((slide, i) => (
+                  <SwiperSlide key={i}>
                     <div className={s.sliderSlide}>
                       <div className={s.sliderSlideItem}>
                         <img src={slide.photo1} alt="" />

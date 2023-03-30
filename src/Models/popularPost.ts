@@ -1,7 +1,6 @@
-
 export interface IPopularPost {
-    id: number
-    date:string
-    title: string
-    img:string
+  id: number;
+  img: string;
+  date: string;
+  title: string;
 }

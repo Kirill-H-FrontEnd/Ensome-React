@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Questions.module.scss";
+import s from "./Questions.module.scss";
 // Accordion
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 const AccordionItem = ({ ...rest }) => (
@@ -28,43 +28,36 @@ export const Questions: React.FC = () => {
       title: "What are data analytics?",
       value:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
-      key: "1",
     },
     {
       title: "What is data mining?",
       value:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
-      key: "2",
     },
     {
       title: "What is business intelligence?",
       value:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
-      key: "3",
     },
     {
       title: "What is exploratory data analysis (EDA)?",
       value:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
-      key: "4",
     },
     {
       title: "What is confirmatory data analysis (CDA)?",
       value:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
-      key: "5",
     },
     {
       title: "What is data visualisation",
       value:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
-      key: "6",
     },
     {
       title: "What are predictive analytics?",
       value:
         "Phasellus tristique eu nisl eu consectetur. Morbi urna massa, imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis lobortis eros. ",
-      key: "7",
     },
   ];
   return (
@@ -77,9 +70,9 @@ export const Questions: React.FC = () => {
               transition
               transitionTimeout={200}
             >
-              {questionsItems.map((item) => (
+              {questionsItems.map((item, i) => (
                 <AccordionItem
-                  key={item.key}
+                  key={i}
                   header={
                     <>
                       {item.title}

@@ -1,5 +1,5 @@
 // Styles
-import s from "./_FormContactsUs.module.scss";
+import s from "./FormContactsUs.module.scss";
 // Router
 import { Link } from "react-router-dom";
 // Button
@@ -14,17 +14,14 @@ export const FormContactsUs: React.FC = () => {
     {
       title: "Email address",
       value: "ensome@info.co.us",
-      key: "1",
     },
     {
       title: "Phone number",
       value: "+1601-201-5580",
-      key: "2",
     },
     {
       title: "Address",
       value: "1642 Washington Avenue, Jackson, MS, Mississippi, 39201",
-      key: "3",
     },
   ];
   return (
@@ -42,8 +39,8 @@ export const FormContactsUs: React.FC = () => {
                 corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.
               </p>
               <div className={s.contactsUsInfoContent}>
-                {adressItems.map((item) => (
-                  <div key={item.key}>
+                {adressItems.map((item, i) => (
+                  <div key={i}>
                     <span>{item.title}</span>
                     <h5>{item.value}</h5>
                   </div>

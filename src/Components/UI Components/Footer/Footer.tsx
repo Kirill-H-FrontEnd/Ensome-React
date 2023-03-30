@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Footer.module.scss";
+import s from "./Footer.module.scss";
 // Router
 import { Link, NavLink, useLocation } from "react-router-dom";
 // FontAwesome
@@ -33,30 +33,30 @@ export const Footer: React.FC = () => {
   const location = useLocation();
   // Arrays links
   const linksAbout = [
-    { value: "Home", href: "/", key: "1" },
-    { value: "About Us", href: "AboutUs", key: "2" },
-    { value: "Services", href: "Services", key: "3" },
-    { value: "Solutions", href: "Solutions", key: "4" },
+    { value: "Home", href: "/" },
+    { value: "About Us", href: "AboutUs" },
+    { value: "Services", href: "Services" },
+    { value: "Solutions", href: "Solutions" },
   ];
   const linksInformation = [
-    { value: "Contacts", href: "Contacts", key: "1" },
-    { value: "Our team", href: "OurTeam", key: "2" },
-    { value: "Blog", href: "Blog", key: "3" },
-    { value: "FAQ", href: "FAQ", key: "4" },
+    { value: "Contacts", href: "Contacts" },
+    { value: "Our team", href: "OurTeam" },
+    { value: "Blog", href: "Blog" },
+    { value: "FAQ", href: "FAQ" },
   ];
   const linksService = [
-    { value: "Pages", href: "Pages", key: "1" },
-    { value: "Elements", href: "Elements", key: "2" },
-    { value: "Todo App", href: "TodoAPP", key: "3" },
-    { value: "Pricing", href: "Pricing", key: "4" },
+    { value: "Pages", href: "Pages" },
+    { value: "Elements", href: "Elements" },
+    { value: "Todo App", href: "TodoAPP" },
+    { value: "Pricing", href: "Pricing" },
   ];
   const socialLinks = [
-    { value: faFacebookF, href: "https://ru-ru.facebook.com/", key: "1" },
-    { value: faTwitter, href: "https://twitter.com/?lang=ru", key: "2" },
-    { value: faInstagram, href: "https://www.instagram.com/", key: "3" },
-    { value: faYoutube, href: "https://www.youtube.com/", key: "4" },
-    { value: faBehance, href: "https://www.behance.net/", key: "5" },
-    { value: faTelegramPlane, href: "https://web.telegram.org/z/", key: "6" },
+    { value: faFacebookF, href: "https://ru-ru.facebook.com/" },
+    { value: faTwitter, href: "https://twitter.com/?lang=ru" },
+    { value: faInstagram, href: "https://www.instagram.com/" },
+    { value: faYoutube, href: "https://www.youtube.com/" },
+    { value: faBehance, href: "https://www.behance.net/" },
+    { value: faTelegramPlane, href: "https://web.telegram.org/z/" },
   ];
 
   return (
@@ -78,12 +78,12 @@ export const Footer: React.FC = () => {
                       <FontAwesomeIcon icon={faChevronDown} />
                     </h3>
                     <nav>
-                      {linksAbout.map((link) => (
+                      {linksAbout.map((link, i) => (
                         <NavLink
                           className={({ isActive }) =>
                             isActive ? s.active : ""
                           }
-                          key={link.key}
+                          key={i}
                           to={link.href}
                         >
                           {link.value}
@@ -97,12 +97,12 @@ export const Footer: React.FC = () => {
                       <FontAwesomeIcon icon={faChevronDown} />
                     </h3>
                     <nav>
-                      {linksInformation.map((link) => (
+                      {linksInformation.map((link, i) => (
                         <NavLink
                           className={({ isActive }) =>
                             isActive ? s.active : ""
                           }
-                          key={link.key}
+                          key={i}
                           to={link.href}
                         >
                           {link.value}
@@ -116,12 +116,12 @@ export const Footer: React.FC = () => {
                       <FontAwesomeIcon icon={faChevronDown} />
                     </h3>
                     <nav>
-                      {linksService.map((link) => (
+                      {linksService.map((link, i) => (
                         <NavLink
                           className={({ isActive }) =>
                             isActive ? s.active : ""
                           }
-                          key={link.key}
+                          key={i}
                           to={link.href}
                         >
                           {link.value}
@@ -145,13 +145,13 @@ export const Footer: React.FC = () => {
                     >
                       {({ toggle }: any) => (
                         <>
-                          {linksAbout.map((link) => (
+                          {linksAbout.map((link, i) => (
                             <NavLink
                               className={({ isActive }) =>
                                 isActive ? s.active : ""
                               }
                               onClick={() => toggle(false)}
-                              key={link.key}
+                              key={i}
                               to={link.href}
                             >
                               {link.value}
@@ -170,13 +170,13 @@ export const Footer: React.FC = () => {
                     >
                       {({ toggle }: any) => (
                         <>
-                          {linksInformation.map((link) => (
+                          {linksInformation.map((link, i) => (
                             <NavLink
                               className={({ isActive }) =>
                                 isActive ? s.active : ""
                               }
                               onClick={() => toggle(false)}
-                              key={link.key}
+                              key={i}
                               to={link.href}
                             >
                               {link.value}
@@ -195,13 +195,13 @@ export const Footer: React.FC = () => {
                     >
                       {({ toggle }: any) => (
                         <>
-                          {linksService.map((link) => (
+                          {linksService.map((link, i) => (
                             <NavLink
                               className={({ isActive }) =>
                                 isActive ? s.active : ""
                               }
                               onClick={() => toggle(false)}
-                              key={link.key}
+                              key={i}
                               to={link.href}
                             >
                               {link.value}
@@ -262,8 +262,8 @@ export const Footer: React.FC = () => {
                 <div className={s.footerSocial}>
                   <h3>Social</h3>
                   <nav>
-                    {socialLinks.map((link) => (
-                      <a key={link.key} href={link.href} target={"_blank"}>
+                    {socialLinks.map((link, i) => (
+                      <a key={i} href={link.href} target={"_blank"}>
                         <FontAwesomeIcon icon={link.value} />
                       </a>
                     ))}

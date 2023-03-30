@@ -1,6 +1,6 @@
 import { SetStateAction } from "react";
 // Styles
-import s from "./_ToggleMenu.module.scss";
+import s from "./ToggleMenu.module.scss";
 // Router
 import { NavLink } from "react-router-dom";
 // Images
@@ -49,7 +49,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
   const toggleLinks = [
     {
       title: "Home",
-      key: "1",
+
       value1: "Home",
       value2: "AboutUs",
       value3: "Services",
@@ -61,7 +61,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
     },
     {
       title: "Solutions",
-      key: "2",
+
       value1: "Contacts",
       value2: "Our Team",
       value3: "Pages",
@@ -73,19 +73,19 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
     },
     {
       title: "Pages",
-      key: "3",
-      value1: "Site Map",
+
+      value1: "TodoApp",
       value2: "AboutUs",
       value3: "Pricing",
       value4: "Blog",
-      href1: "SiteMap",
+      href1: "TodoApp",
       href2: "AboutUs",
       href3: "Pricing",
       href4: "Blog",
     },
     {
       title: "Elements",
-      key: "4",
+
       value1: "Home",
       value2: "AboutUs",
       value3: "Services",
@@ -97,7 +97,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
     },
     {
       title: "Blog",
-      key: "5",
+
       href: "plc",
       value1: "Home",
       value2: "AboutUs",
@@ -110,7 +110,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
     },
     {
       title: "Contacts",
-      key: "6",
+
       href: "plc",
       value1: "FAQ",
       value2: "AboutUs",
@@ -125,8 +125,14 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
 
   return (
     <>
-      <section className={`${s.toggleWrapper} ${active ? s.active : ""}`}>
-        <section className={s.toggleMenu}>
+      <section
+        onClick={() => {
+          setActiveToggle(false);
+          setBurgerActive(false);
+        }}
+        className={`${s.toggleWrapper} ${active ? s.active : ""}`}
+      >
+        <section onClick={(e) => e.stopPropagation()} className={s.toggleMenu}>
           <div className={s.toggleMenuHeader}>
             <img src={LogoWhite} alt="" />
             <span
@@ -144,9 +150,9 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
               transitionTimeout={200}
               className={s.szhAccordion}
             >
-              {toggleLinks.map((link) => (
+              {toggleLinks.map((link, i) => (
                 <AccordionItem
-                  key={link.key}
+                  key={i}
                   header={
                     <>
                       <FontAwesomeIcon icon={faChevronDown} />

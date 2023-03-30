@@ -1,5 +1,5 @@
 // Styles
-import s from "./_BtnTop.module.scss";
+import s from "./BtnTop.module.scss";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";

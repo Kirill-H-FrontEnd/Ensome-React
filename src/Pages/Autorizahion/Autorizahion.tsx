@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Autarizahion.module.scss";
+import s from "./Autarizahion.module.scss";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";

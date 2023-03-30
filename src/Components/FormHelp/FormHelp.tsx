@@ -1,5 +1,5 @@
 // Styles
-import s from "./_FormHelp.module.scss";
+import s from "./FormHelp.module.scss";
 // Button
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";

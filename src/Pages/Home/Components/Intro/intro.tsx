@@ -1,5 +1,5 @@
 // Styles
-import s from "./_Intro.module.scss";
+import s from "./Intro.module.scss";
 // Marquee
 import Marquee from "react-fast-marquee";
 // import Atropos component
@@ -60,10 +60,10 @@ export const Intro: React.FC = () => {
                     Learne more
                   </Button>
                 </Link>
-                <Link target={"_blank"} to="https://www.youtube.com/">
+                <a target={"_blank"} href="https://www.youtube.com/">
                   <FontAwesomeIcon icon={faPlay} />
                   Watch the demo
-                </Link>
+                </a>
               </div>
             </section>
             <figure>

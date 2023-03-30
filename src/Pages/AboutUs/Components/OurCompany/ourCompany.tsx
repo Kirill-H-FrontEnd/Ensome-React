@@ -1,5 +1,5 @@
 // Styles
-import s from "./_OurCompany.module.scss";
+import s from "./OurCompany.module.scss";
 // Images
 import Img1 from "Images/AboutUsPage/OurCompany/OurCompanyImg1.jpg";
 import Img2 from "Images/AboutUsPage/OurCompany/OurCompanyImg2.jpg";

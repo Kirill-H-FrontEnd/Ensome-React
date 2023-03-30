@@ -1,5 +1,5 @@
 // Styles
-import s from "./_SolutionCards.module.scss";
+import s from "./SolutionCards.module.scss";
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";

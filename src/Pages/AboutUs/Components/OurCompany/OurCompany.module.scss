@@ -1,0 +1,39 @@
+@import "../../../../scss/vars";
+.ourCompanyAboutUsPage {
+    padding: 100px 0px;
+    .ourCompanyInner {
+        display: grid;
+        grid-row-gap: 100px;
+        .ourCompanyTop,
+        .ourCompanyBottom {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            align-items: center;
+            justify-content: space-between;
+            grid-column-gap: 50px;
+            section {
+                max-width: 550px;
+                h2 {
+                    font-size: $title1;
+                    color: $black;
+                    font-weight: 800;
+                    font-family: $secondary;
+                    margin-bottom: 30px;
+                }
+                p {
+                    color: $gray;
+                    line-height: 33px;
+                    font-size: 20px;
+                }
+            }
+            figure {
+                img {
+                    width: 100%;
+                    height: 0 auto;
+                }
+            }
+        }
+    }
+}
+// ! Media
+@import "media.scss";

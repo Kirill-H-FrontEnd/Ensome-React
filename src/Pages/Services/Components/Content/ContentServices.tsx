@@ -1,5 +1,5 @@
 // Styles
-import s from "./_ContentService.module.scss";
+import s from "./ContentService.module.scss";
 // Button
 import Button from "@mui/material/Button";
 // Font Awesome
@@ -36,7 +36,6 @@ function ContentServices() {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "1",
     },
     {
       title: "Embed analytics",
@@ -45,7 +44,6 @@ function ContentServices() {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "2",
     },
     {
       title: "Data analytics",
@@ -54,7 +52,6 @@ function ContentServices() {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "3",
     },
     {
       title: "Big data consulting",
@@ -63,7 +60,6 @@ function ContentServices() {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "4",
     },
     {
       title: "Artificial intelligence",
@@ -72,7 +68,6 @@ function ContentServices() {
       value3: "Internet of things",
       value4: "Digital transformation",
       value5: "Healthcare it",
-      key: "5",
     },
   ];
 
@@ -146,9 +141,9 @@ function ContentServices() {
               transition
               transitionTimeout={200}
             >
-              {acardionItems.map((slide) => (
+              {acardionItems.map((slide, i) => (
                 <AccordionItem
-                  key={slide.key}
+                  key={i}
                   header={
                     <>
                       {slide.title}

@@ -1,27 +1,23 @@
 // Styles
-import s from "./_Stat.module.scss";
+import s from "./Stat.module.scss";
 
 export const Stat: React.FC = () => {
   const items = [
     {
       value: "1830+",
       name: "Project executed",
-      key: "1",
     },
     {
       value: "220",
       name: "Data analytics",
-      key: "2",
     },
     {
       value: "390",
       name: "Data management",
-      key: "3",
     },
     {
       value: "834+",
       name: "Satisfied customers",
-      key: "4",
     },
   ];
   return (
@@ -33,8 +29,8 @@ export const Stat: React.FC = () => {
               <h2>Ensome in numbers</h2>
             </section>
             <section className={s.statItems}>
-              {items.map((item) => (
-                <div key={item.key} className={s.statItem}>
+              {items.map((item, i) => (
+                <div key={i} className={s.statItem}>
                   <h3>{item.value}</h3>
                   <pre>{item.name}</pre>
                 </div>

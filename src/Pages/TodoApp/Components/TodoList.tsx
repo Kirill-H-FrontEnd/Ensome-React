@@ -1,3 +1,5 @@
+// Styles
+import s from "../TodoApp.module.scss";
 import { ITodo } from "Models/Todo";
 // Icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,25 +17,25 @@ export const TodoList: React.FC<TodoListProps> = ({
   onToggle,
 }) => {
   if (todos.length === 0) {
-    return <p className="noTasks">There's nothing here.</p>;
+    return <p className={s.noTasks}>There's nothing here.</p>;
   }
   return (
     <>
       {todos.map((todo) => {
-        const classes = ["Todo-list"];
+        const classes = [`${s.TodoList}`];
         if (todo.completed) {
-          classes.push("completed");
+          classes.push(`${s.completed}`);
         }
         return (
           <div className={classes.join(" ")} key={todo.id}>
-            <label className="toggler-wrapper style-1">
+            <label className={`${s.togglerWrapper} ${s.style_1}`}>
               <input
                 checked={todo.completed}
                 onChange={() => onToggle(todo.id)}
                 type="checkbox"
               />
-              <div className="toggler-slider">
-                <div className="toggler-knob">
+              <div className={s.togglerSlider}>
+                <div className={s.togglerKnob}>
                   <span>
                     <FontAwesomeIcon icon={faCheck} />
                   </span>

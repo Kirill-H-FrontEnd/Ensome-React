@@ -1,0 +1,39 @@
+@media screen and (max-width: 1024px) {
+    .card {
+        .cardInner {
+            grid-template-columns: auto;
+            justify-content: center;
+            figure {
+                text-align: center;
+                img {
+                    width: 100%;
+                    height: 0 auto;
+                }
+            }
+            .cardInfo {
+                text-align: center;
+
+                .cardInfoSocial {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .card {
+        padding: 50px 0px;
+        .card-inner {
+            .card-info {
+                width: 100%;
+                text-align: start;
+                #goBack {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
