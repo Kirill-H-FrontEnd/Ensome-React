@@ -1,8 +1,8 @@
 // Styles
 import s from "../Content/BlogContent.module.scss";
 // Models
-// Router
 import { IPopularPost } from "Models/popularPost";
+// Router
 import { Link } from "react-router-dom";
 
 interface IPopularPostProps {

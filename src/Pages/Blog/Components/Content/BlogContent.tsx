@@ -42,6 +42,7 @@ const AccordionItem = ({ ...rest }) => (
 );
 // Models
 import { IPopularPost } from "Models/popularPost";
+import { useQuery } from "react-query/types/react";
 
 export const BlogContent: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -60,6 +61,7 @@ export const BlogContent: React.FC = () => {
   const [isError, setError] = useState(false);
   const [pageQty, setPageQty] = useState(0); // impossible
   const [page, setPage] = useState<number>(1);
+
   const fetchDataPosts = async () => {
     try {
       setLoader(true);

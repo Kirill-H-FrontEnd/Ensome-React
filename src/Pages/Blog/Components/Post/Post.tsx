@@ -3,7 +3,7 @@ import s from "../Content/BlogContent.module.scss";
 // Router
 import { Link } from "react-router-dom";
 // Models
-import { IPost } from "Moidels/postBlog";
+import { IPost } from "Models/postBlog";
 
 interface IPostProps {
   post: IPost;
