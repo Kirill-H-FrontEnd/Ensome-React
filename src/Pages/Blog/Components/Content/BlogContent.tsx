@@ -42,7 +42,6 @@ const AccordionItem = ({ ...rest }) => (
 );
 // Models
 import { IPopularPost } from "Models/popularPost";
-import { useQuery } from "react-query/types/react";
 
 export const BlogContent: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -55,29 +54,12 @@ export const BlogContent: React.FC = () => {
   const err = () =>
     toast.error(<span>Error! Data not received...</span>, { duration: 3000 });
   // ----
-  const [post, setPost] = useState<IPost[]>([]);
   const [popularPost, setPopularPost] = useState<IPopularPost[]>([]);
   const [loader, setLoader] = useState(false);
   const [isError, setError] = useState(false);
   const [pageQty, setPageQty] = useState(0); // impossible
   const [page, setPage] = useState<number>(1);
 
-  const fetchDataPosts = async () => {
-    try {
-      setLoader(true);
-      const resp = await axios.get<IPost[]>(
-        `http://localhost:3001/blogPosts?title_like${postQuery}&_limit=3&_page=${page}`
-      );
-      setPost(resp.data);
-      succ();
-      console.log(resp);
-      setLoader(false);
-    } catch (e: unknown) {
-      err();
-      setLoader(false);
-      setError(true);
-    }
-  };
   const fetchDataPopularPosts = async () => {
     try {
       setLoader(true);
@@ -92,9 +74,8 @@ export const BlogContent: React.FC = () => {
     }
   };
   useEffect(() => {
-    fetchDataPosts();
     fetchDataPopularPosts();
-  }, [page, postQuery]);
+  }, []);
   // Change pages pagination
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     useScrollTopSmooth();
@@ -174,14 +155,17 @@ export const BlogContent: React.FC = () => {
         <div className="box">
           <section className={s.blogContentInner}>
             <section className={s.blogPosts}>
+              {/* Message */}
               <div className={s.message}>
                 <Toaster position="bottom-center" reverseOrder={false} />
               </div>
+              {/* Loader */}
               {loader && (
                 <span className={s.loader}>
                   <Loader />
                 </span>
               )}
+              {/* Error */}
               {isError && (
                 <span className={s.error}>
                   <h1>Data error! Posts not loaded...</h1>
@@ -190,11 +174,8 @@ export const BlogContent: React.FC = () => {
                   </a>
                 </span>
               )}
-              {post
-                .filter((post) => post.title.includes(postQuery))
-                .map((post) => (
-                  <Post key={post.id} post={post} />
-                ))}
+              {/* Posts */}
+              <Post page={page} postQuery={postQuery} />
               <Pagination
                 onChange={handleChange}
                 count={4}
