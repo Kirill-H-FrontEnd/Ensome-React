@@ -1,23 +1,14 @@
 // Styles
 import s from "./BlogContent.module.scss";
-// Toast(Mess)
-import toast, { Toaster } from "react-hot-toast";
-// Axios
-import axios from "axios";
 // Hooks
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // Components
-import { IPost } from "Models/postBlog";
-import { Loader } from "Components/Loader/Loader";
 import { useSearchParams } from "react-router-dom";
 import { Post } from "../Post/Post";
 import { PopularPost } from "../PopularPost/PopularPost";
 // FontEwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowsRotate,
-  faChevronDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 // Pagination
 import { Pagination } from "@mui/material";
 // Hooks
@@ -40,42 +31,14 @@ const AccordionItem = ({ ...rest }) => (
     panelProps={{ className: s.accordionPanel }}
   />
 );
-// Models
-import { IPopularPost } from "Models/popularPost";
 
 export const BlogContent: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const postQuery = searchParams.get("post") || "";
-  // Messages
-  const succ = () =>
-    toast.success(<span data-page={page}>Posts received!</span>, {
-      duration: 3000,
-    });
-  const err = () =>
-    toast.error(<span>Error! Data not received...</span>, { duration: 3000 });
   // ----
-  const [popularPost, setPopularPost] = useState<IPopularPost[]>([]);
-  const [loader, setLoader] = useState(false);
-  const [isError, setError] = useState(false);
   const [pageQty, setPageQty] = useState(0); // impossible
   const [page, setPage] = useState<number>(1);
 
-  const fetchDataPopularPosts = async () => {
-    try {
-      setLoader(true);
-      const resp = await axios.get<IPopularPost[]>(
-        `http://localhost:3001/popularPosts`
-      );
-      setPopularPost(resp.data);
-      setLoader(false);
-    } catch (e: unknown) {
-      setLoader(false);
-      setError(true);
-    }
-  };
-  useEffect(() => {
-    fetchDataPopularPosts();
-  }, []);
   // Change pages pagination
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     useScrollTopSmooth();
@@ -155,25 +118,6 @@ export const BlogContent: React.FC = () => {
         <div className="box">
           <section className={s.blogContentInner}>
             <section className={s.blogPosts}>
-              {/* Message */}
-              <div className={s.message}>
-                <Toaster position="bottom-center" reverseOrder={false} />
-              </div>
-              {/* Loader */}
-              {loader && (
-                <span className={s.loader}>
-                  <Loader />
-                </span>
-              )}
-              {/* Error */}
-              {isError && (
-                <span className={s.error}>
-                  <h1>Data error! Posts not loaded...</h1>
-                  <a href="">
-                    <FontAwesomeIcon icon={faArrowsRotate} />
-                  </a>
-                </span>
-              )}
               {/* Posts */}
               <Post page={page} postQuery={postQuery} />
               <Pagination
@@ -183,6 +127,7 @@ export const BlogContent: React.FC = () => {
                 color="primary"
               />
             </section>
+            {/* SideBar */}
             <section className={s.blogSideBar}>
               <form onSubmit={handleSubmit}>
                 <input
@@ -218,9 +163,8 @@ export const BlogContent: React.FC = () => {
               </div>
               <div className={s.blogSideBarPosts}>
                 <h4>Popular posts</h4>
-                {popularPost.map((post) => (
-                  <PopularPost key={post.id} post={post} />
-                ))}
+                {/* Popular Posts */}
+                <PopularPost />
               </div>
               <div className={s.blogSideBarCategorisDesctop}>
                 <h4>Categories</h4>
