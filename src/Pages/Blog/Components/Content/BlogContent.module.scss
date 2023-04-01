@@ -6,49 +6,39 @@
         grid-template-columns: 1fr 450px;
         justify-content: space-between;
         grid-column-gap: 55px;
+        .loader {
+            text-align: center;
+        }
+        .error {
+            text-align: center;
+            overflow: hidden;
+            opacity: 0;
+            transform: translate(0px, 30px);
+            animation: errorMessAnim 0.5s ease forwards;
+            h1 {
+                text-align: center;
+                color: #df2e38;
+                font-family: $secondary;
+                margin-bottom: 10px;
+
+                font-weight: 600;
+            }
+            a {
+                color: #93bfcf;
+                font-size: 22px;
+                display: inline-block;
+                transition: all 0.2s ease;
+                &:hover {
+                    transform: rotate(35deg) scale(1.1, 1.1);
+                    color: $blue;
+                }
+            }
+        }
         // Posts
         .blogPosts {
             display: grid;
             grid-row-gap: 50px;
             position: relative;
-            .message {
-                position: absolute;
-                span {
-                    font-family: $secondary;
-                    &::after {
-                        content: " Page:" attr(data-page);
-                        color: rgba($color: #61d345, $alpha: 0.8);
-                    }
-                }
-            }
-            .loader {
-                text-align: center;
-            }
-            .error {
-                text-align: center;
-                overflow: hidden;
-                opacity: 0;
-                transform: translate(0px, 30px);
-                animation: errorMessAnim 0.5s ease forwards;
-                h1 {
-                    text-align: center;
-                    color: #df2e38;
-                    font-family: $secondary;
-                    margin-bottom: 10px;
-                    text-transform: uppercase;
-                    font-weight: 700;
-                }
-                a {
-                    color: #93bfcf;
-                    font-size: 24px;
-                    display: inline-block;
-                    transition: all 0.2s ease;
-                    &:hover {
-                        transform: rotate(35deg) scale(1.1, 1.1);
-                        color: $blue;
-                    }
-                }
-            }
             .blogPostsItem {
                 opacity: 0;
                 transform: translate(0px, 50px);
