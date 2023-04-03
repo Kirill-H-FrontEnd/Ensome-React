@@ -1,4 +1,4 @@
-import { ITodo } from "Moidels/Todo";
+import { ITodo } from "Models/Todo";
 import { useEffect, useState } from "react";
 
 export function useTodoApp() {
