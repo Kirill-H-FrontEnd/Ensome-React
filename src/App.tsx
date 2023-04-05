@@ -1,5 +1,5 @@
 // Styles
-import "./index.scss";
+import "./scss/index.scss";
 import "atropos/css";
 // Router
 import { Route, Routes, useLocation } from "react-router-dom";
