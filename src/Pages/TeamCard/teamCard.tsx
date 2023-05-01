@@ -38,6 +38,7 @@ export const TeamCard: React.FC = () => {
     { icon: faTwitter, href: "https://twitter.com/" },
     { icon: faInstagram, href: "https://www.instagram.com/" },
   ];
+  console.log(document.querySelectorAll(" p * div "));
   return (
     <>
       <HeaderPage title={name} supTitle={""} />
@@ -49,9 +50,9 @@ export const TeamCard: React.FC = () => {
         </p>
       )}
       {isLoading && (
-        <p style={{ textAlign: "center", padding: "20px 0px" }}>
+        <div style={{ textAlign: "center", padding: "20px 0px" }}>
           <Loader />
-        </p>
+        </div>
       )}
       {isSuccess && (
         <section className={s.card}>

@@ -88,6 +88,16 @@ header {
                     display: grid;
                     grid-template-columns: auto auto;
                     justify-content: space-between;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 2px;
+                        height: 80%;
+                        background-color: $bgGray;
+                    }
                     li {
                         a {
                             position: relative;
@@ -99,7 +109,7 @@ header {
                                 transform: translate(0%, -50%);
                                 width: 5px;
                                 height: 5px;
-                                background-color: rgba($color: $black, $alpha: 1);
+                                background-color: rgba($color: $bgGray, $alpha: 1);
                                 border-radius: 50%;
                             }
                             &.active {

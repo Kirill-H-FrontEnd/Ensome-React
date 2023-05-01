@@ -5,6 +5,7 @@ import { BtnTop } from "./UI Components/ButtonTop/ButtonTop";
 import { ToggleMenu } from "./UI Components/ToggleMenu/toggleMenu";
 import { useState } from "react";
 import { BurgerMenu } from "./UI Components/BurgerMenu/BurgerMenu";
+
 function Logout() {
   // State BurgerMenu and ToggleMenu
   const [activeToggle, setActiveToggle] = useState<boolean>(false);

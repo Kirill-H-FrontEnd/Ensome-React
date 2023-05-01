@@ -4,6 +4,7 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 // ReactQuery
 import { QueryClient, QueryClientProvider } from "react-query";
+import posthog from "posthog-js";
 const client = new QueryClient({
   defaultOptions: {
     queries: {

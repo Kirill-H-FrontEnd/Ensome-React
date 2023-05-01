@@ -31,6 +31,10 @@ export const Post: React.FC<IPostProps> = ({ page, postQuery }) => {
     );
   };
 
+  const filterPosts = resp?.data.filter((post: IPost) => {
+    return post.title.toLowerCase().includes(postQuery.toLowerCase());
+  });
+
   return (
     <>
       {isLoading && (
@@ -47,20 +51,18 @@ export const Post: React.FC<IPostProps> = ({ page, postQuery }) => {
         </span>
       )}
       {isSuccess &&
-        resp?.data
-          .filter((post: IPost) => post.title.includes(postQuery))
-          .map((post: IPost) => (
-            <div key={post.id} className={s.blogPostsItem}>
-              <img src={post.image} alt="" />
-              <div className={s.blogPostsInfo}>
-                <pre>22 June 2022</pre>
-                <h5>{post.title}</h5>
-                <p>{post.description}</p>
-                <strong>Rate: {post.rating.rate}</strong>
-                <Link to={`/Blog/${post.id}`}>Read more</Link>
-              </div>
+        filterPosts.map((post: IPost) => (
+          <div key={post.id} className={s.blogPostsItem}>
+            <img src={post.image} alt="" />
+            <div className={s.blogPostsInfo}>
+              <pre>22 June 2022</pre>
+              <h5>{post.title}</h5>
+              <p>{post.description}</p>
+              <strong>Rate: {post.rating.rate}</strong>
+              <Link to={`/Blog/${post.id}`}>Read more</Link>
             </div>
-          ))}
+          </div>
+        ))}
     </>
   );
 };
