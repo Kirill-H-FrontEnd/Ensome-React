@@ -4,7 +4,7 @@ import "atropos/css";
 // Router
 import { Route, Routes, useLocation } from "react-router-dom";
 // Pages
-import { Logout } from "Components/Logout";
+import { Logout } from "Components/Layout";
 import { Home } from "Pages/Home/Home";
 import { Services } from "Pages/Services/Services";
 import { AboutUs } from "Pages/AboutUs/aboutUs";
