@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Post } from "../Post/Post";
 import { PopularPost } from "../PopularPost/PopularPost";
-// FontEwesome
+// FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 // Pagination
