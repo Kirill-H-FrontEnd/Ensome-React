@@ -1,5 +1,5 @@
 // Styles
-import s from "./FormConatcts.module.scss";
+import s from "./FormContacts.module.scss";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
