@@ -216,5 +216,31 @@
       "img": "/src/Images/BlogPage/SideBarPosts/img_4.jpg",
       "date": "20 June 2022"
     }
+  ],
+  "comments": [
+    {
+      "photo1": "/src/Images/HomePage/Comments/Photo1.jpg",
+      "photo2": "/src/Images/HomePage/Comments/Photo2.jpg",
+      "text": "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
+      "name": "Alex Bern ",
+      "proff1": "CEO by PixelPerfect",
+      "proff2": "CEO by NOX"
+    },
+    {
+      "photo1": "/src/Images/HomePage/Comments/Photo1.jpg",
+      "photo2": "/src/Images/HomePage/Comments/Photo2.jpg",
+      "text": "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
+      "name": "Alex Bern ",
+      "proff1": "CEO by PixelPerfect",
+      "proff2": "CEO by NOX"
+    },
+    {
+      "photo1": "/src/Images/HomePage/Comments/Photo1.jpg",
+      "photo2": "/src/Images/HomePage/Comments/Photo2.jpg",
+      "text": "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
+      "name": "Alex Bern ",
+      "proff1": "CEO by PixelPerfect",
+      "proff2": "CEO by NOX"
+    }
   ]
 }

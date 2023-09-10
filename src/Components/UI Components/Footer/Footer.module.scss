@@ -226,19 +226,42 @@
                     display: grid;
                     grid-template-columns: repeat(6, auto);
                     justify-content: start;
-                    grid-column-gap: 20px;
+                    grid-column-gap: 10px;
                     a {
+                        border: 2px solid rgba($color: $blue, $alpha: 0.5);
                         width: 35px;
                         height: 35px;
                         border-radius: 50%;
-                        background-color: $blue;
+                        background-color: $bgGray;
                         position: relative;
-                        transition: all 0.4s ease;
+                        transition: all 0.2s ease;
+                        opacity: 0.5;
+                        overflow: hidden;
                         &:hover {
-                            box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.3);
-                            background-color: white;
+                            background-color: $blue;
+                            transform: translate(0px, -2px);
+                            opacity: 1;
+                            border-color: rgba($color: $blue, $alpha: 0);
                             svg {
-                                color: $blue;
+                                color: white;
+                            }
+                            &:nth-of-type(1) {
+                                background-color: #0675e7;
+                            }
+                            &:nth-of-type(2) {
+                                background-color: #1ca1f1;
+                            }
+                            &:nth-of-type(3) {
+                                background-color: #fd8760;
+                            }
+                            &:nth-of-type(4) {
+                                background-color: #ff0000;
+                            }
+                            &:nth-of-type(5) {
+                                background-color: #0057ff;
+                            }
+                            &:nth-of-type(6) {
+                                background-color: #1ca1f1;
                             }
                         }
                         &:active {
@@ -249,9 +272,9 @@
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            color: white;
+                            color: $blue;
                             font-size: 18px;
-                            transition: all 0.4s ease;
+                            transition: all 0.2s ease;
                         }
                     }
                 }

@@ -3,7 +3,7 @@ import s from "./NotFoundPage.module.scss";
 // Router
 import { Link } from "react-router-dom";
 
-export const Notfoundpage: React.FC = () => {
+export const NotFoundPage: React.FC = () => {
   document.title = "Not found";
   return (
     <section className={s.NotFoundPage}>

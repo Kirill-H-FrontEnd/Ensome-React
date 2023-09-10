@@ -1,5 +1,5 @@
 // Styles
-import s from "./Autarizahion.module.scss";
+import s from "./Authorization.module.scss";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // Hooks
 import { useState } from "react";
 
-export const Autorizahion: React.FC = () => {
+export const Authorization: React.FC = () => {
   const [activeSignIn, setActiveSignIn] = useState(false);
   const [activeSignUp, setActiveSignUp] = useState(false);
 
@@ -19,10 +19,10 @@ export const Autorizahion: React.FC = () => {
   }
   return (
     <>
-      <section className={s.AutarizahionPage}>
-        <section className={s.AutarizahionInner}>
-          <section className={s.AutarizahionForms}>
-            <form className={`${s.formSignIn} ${activeSignIn ? s.hide : ""}`}>
+      <section className={s.AuthorizationPage}>
+        <section className={s.AuthorizationInner}>
+          <section className={s.AuthorizationForms}>
+            <form className={`${activeSignIn ? s.hide : ""}`}>
               <h1>Sign In</h1>
               <div className={s.formSignInInputs}>
                 <label htmlFor="email">Email</label>
@@ -39,11 +39,11 @@ export const Autorizahion: React.FC = () => {
                 </p>
                 <button>
                   <FontAwesomeIcon icon={faGoogle} />
-                  log in widh google
+                  log in with google
                 </button>
               </div>
               <div className={s.formSignInInfo}>
-                <Link to={""}>Forgout password</Link>
+                <Link to={""}>Forgot password?</Link>
                 <p>
                   Dont have an account?
                   <Link
@@ -63,7 +63,7 @@ export const Autorizahion: React.FC = () => {
                 </Link>
               </div>
             </form>
-            <form className={`${s.formSignUp} ${activeSignUp ? s.active : ""}`}>
+            <form className={` ${activeSignUp ? s.active : ""}`}>
               <h1>Sign Up</h1>
               <div className={s.formSignInInputs}>
                 <label htmlFor="email">Login</label>

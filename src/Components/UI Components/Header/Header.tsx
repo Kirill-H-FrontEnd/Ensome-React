@@ -6,8 +6,10 @@ import Button from "@mui/material/Button";
 import { NavLink, Link, useLocation } from "react-router-dom";
 // Images
 import Logo from "Images/Header/LogoBlue.svg";
+// Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// React
 import { useState } from "react";
 
 export const Header: React.FC = () => {
@@ -42,7 +44,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      {location.pathname != "/Autorizahion" && (
+      {location.pathname != "/Authorization" && (
         <header className={isFixed ? s.fixed : ""}>
           <div className="box">
             <section className={s.headerInner}>
@@ -100,8 +102,8 @@ export const Header: React.FC = () => {
                   </ul>
                 </div>
               </nav>
-              <div className={s.btnGetStarted}>
-                <Link to={"Autorizahion"}>Log in</Link>
+              <div className={s.actions}>
+                <Link to={"Authorization"}>Log in</Link>
                 <Button className={s.btn} variant="contained">
                   Get started
                 </Button>

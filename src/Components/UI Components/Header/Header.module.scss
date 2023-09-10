@@ -2,8 +2,8 @@
 header {
     width: 100%;
     position: absolute;
-    padding: 30px 0px;
-    backdrop-filter: blur(4px);
+    padding: 20px 0px;
+    background-color: white;
     top: 0;
     left: 0;
     z-index: 800;
@@ -150,7 +150,7 @@ header {
                 }
             }
         }
-        .btnGetStarted {
+        .actions {
             display: grid;
             grid-template-columns: repeat(2, auto);
             align-items: center;
@@ -161,12 +161,12 @@ header {
                 color: $blue;
             }
             .btn {
-                padding: 10px 35px;
+                padding: 8px 20px;
                 background: transparent;
                 border: 2px solid $blue;
                 color: $blue;
                 font-size: 14px;
-                border-radius: 6px;
+                border-radius: 4px;
                 width: 100%;
                 height: 100%;
                 text-transform: capitalize;
@@ -182,9 +182,9 @@ header {
     }
     &.fixed {
         position: fixed;
-        background-color: rgba($color: white, $alpha: 0.9);
         box-shadow: 0px 0px 6px rgba($color: $black, $alpha: 0.2);
-        padding: 10px 0px;
+        padding: 8px 0px;
+        border-radius: 0px 0px 30px 30px;
     }
 }
 // ! Media

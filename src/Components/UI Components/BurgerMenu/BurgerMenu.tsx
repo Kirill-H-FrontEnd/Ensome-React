@@ -1,26 +1,19 @@
 import React, { SetStateAction } from "react";
-// Sttyles
+// Styles
 import s from "./BurgerMenu.module.scss";
 
 interface IBurgerMenuProps {
-  activeBurger: boolean;
-  setBurgerActive: React.Dispatch<SetStateAction<boolean>>;
   setActiveToggle: React.Dispatch<SetStateAction<boolean>>;
 }
 
-export const BurgerMenu: React.FC<IBurgerMenuProps> = ({
-  setActiveToggle,
-  activeBurger,
-  setBurgerActive,
-}) => {
+export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ setActiveToggle }) => {
   return (
     <>
       <section
         onClick={() => {
           setActiveToggle(true);
-          setBurgerActive(true);
         }}
-        className={`${s.burgerWrapper} ${activeBurger ? s.active : ""}`}
+        className={`${s.burgerWrapper}`}
       >
         <div className={s.burgerMenu}>
           <span></span>

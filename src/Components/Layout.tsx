@@ -6,10 +6,9 @@ import { ToggleMenu } from "./UI Components/ToggleMenu/toggleMenu";
 import { useState } from "react";
 import { BurgerMenu } from "./UI Components/BurgerMenu/BurgerMenu";
 
-function Logout() {
+function Layout() {
   // State BurgerMenu and ToggleMenu
   const [activeToggle, setActiveToggle] = useState<boolean>(false);
-  const [burgerActive, setBurgerActive] = useState<boolean>(false);
   // Animate blocks
   function useAnimate() {
     let anims = document.querySelectorAll(".animate");
@@ -32,18 +31,10 @@ function Logout() {
       </main>
       <Footer />
       <BtnTop />
-      <BurgerMenu
-        activeBurger={burgerActive}
-        setBurgerActive={setBurgerActive}
-        setActiveToggle={setActiveToggle}
-      />
-      <ToggleMenu
-        active={activeToggle}
-        setActiveToggle={setActiveToggle}
-        setBurgerActive={setBurgerActive}
-      />
+      <BurgerMenu setActiveToggle={setActiveToggle} />
+      <ToggleMenu active={activeToggle} setActiveToggle={setActiveToggle} />
     </>
   );
 }
 
-export { Logout };
+export { Layout };

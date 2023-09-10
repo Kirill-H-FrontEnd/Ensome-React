@@ -1,3 +1,5 @@
+// Models
+import { TComment } from "Models/comments";
 // Styles
 import s from "./Slider.module.scss";
 // Swiper
@@ -5,39 +7,28 @@ import { Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-// Imgs
-import photo1 from "Images/HomePage/Comments/Photo1.jpg";
-import photo2 from "Images/HomePage/Comments/Photo2.jpg";
+// Hooks
 import { useAnimate } from "Hooks/useAnimate";
+// ReactQuery
+import { useQuery } from "react-query";
+// Axios
+import axios from "axios";
+// Components
+import { Loader } from "Components/Loader/Loader";
 
 export const Slider: React.FC = () => {
   useAnimate(s.active);
-  const sliderSlideItems = [
-    {
-      photo1: photo1,
-      photo2: photo2,
-      text: "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
-      name: "Alex Bern ",
-      proff1: "CEO by PixelPerfect",
-      proff2: "CEO by NOX",
-    },
-    {
-      photo1: photo1,
-      photo2: photo2,
-      text: "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
-      name: "Alex Bern ",
-      proff1: "CEO by PixelPerfect",
-      proff2: "CEO by NOX",
-    },
-    {
-      photo1: photo1,
-      photo2: photo2,
-      text: "“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.” ",
-      name: "Alex Bern ",
-      proff1: "CEO by PixelPerfect",
-      proff2: "CEO by NOX",
-    },
-  ];
+  const {
+    data: resp,
+    isLoading,
+    isError,
+    isSuccess,
+  } = useQuery("blogPopularPosts", () => fetchDataComments());
+  const DATA_URL = "http://localhost:3001";
+  axios.defaults.baseURL = DATA_URL;
+  const fetchDataComments = async () => {
+    return axios.get(`/comments`);
+  };
   return (
     <>
       <section className={s.slider}>
@@ -56,28 +47,40 @@ export const Slider: React.FC = () => {
                   bulletClass: `swiper-pagination-bullet ${s.swiper_pagination_bullet}`,
                 }}
               >
-                {sliderSlideItems.map((slide, i) => (
-                  <SwiperSlide key={i}>
-                    <div className={s.sliderSlide}>
-                      <div className={s.sliderSlideItem}>
-                        <img src={slide.photo1} alt="" />
-                        <p>{slide.text}</p>
-                        <div className={s.sliderSlideInfo}>
-                          <h5>{slide.name}</h5>
-                          <pre>{slide.proff1}</pre>
+                {isLoading && (
+                  <div className={s.loader}>
+                    <Loader />
+                  </div>
+                )}
+                {isError && (
+                  <span className={s.error}>
+                    <h1>Data error! Posts not loaded...</h1>
+                    <a href=""></a>
+                  </span>
+                )}
+                {isSuccess &&
+                  resp?.data.map((slide: TComment, i: number) => (
+                    <SwiperSlide key={i}>
+                      <div className={s.sliderSlide}>
+                        <div className={s.sliderSlideItem}>
+                          <img src={slide.photo1} alt="" />
+                          <p>{slide.text}</p>
+                          <div className={s.sliderSlideInfo}>
+                            <h5>{slide.name}</h5>
+                            <pre>{slide.proff1}</pre>
+                          </div>
+                        </div>
+                        <div className={s.sliderSlideItem}>
+                          <img src={slide.photo2} alt="" />
+                          <p>{slide.text}</p>
+                          <div className={s.sliderSlideInfo}>
+                            <h5>{slide.name}</h5>
+                            <pre>{slide.proff2}</pre>
+                          </div>
                         </div>
                       </div>
-                      <div className={s.sliderSlideItem}>
-                        <img src={slide.photo2} alt="" />
-                        <p>{slide.text}</p>
-                        <div className={s.sliderSlideInfo}>
-                          <h5>{slide.name}</h5>
-                          <pre>{slide.proff2}</pre>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
+                    </SwiperSlide>
+                  ))}
               </Swiper>
             </section>
           </section>

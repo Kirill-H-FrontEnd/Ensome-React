@@ -1,5 +1,5 @@
 @import "../../scss/vars";
-.AutarizahionPage {
+.AuthorizationPage {
     width: 100%;
     height: 100vh;
     background-image: url(/src/Images/bgAutorizahion.svg);
@@ -8,11 +8,11 @@
     background-size: cover;
     overflow: hidden;
     position: relative;
-    .AutarizahionInner {
+    .AuthorizationInner {
         display: grid;
         grid-template-columns: 500px;
         position: relative;
-        .AutarizahionForms {
+        .AuthorizationForms {
             box-shadow: 0px 0px 10px rgba($color: $black, $alpha: 0.3);
             height: 100vh;
             background-color: white;
@@ -37,10 +37,10 @@
                 h1 {
                     font-family: $secondary;
                     font-weight: 800;
-                    color: #002b4e;
+                    color: $blue;
                     font-size: 80px;
                     margin-bottom: 10px;
-                    text-shadow: 0px 8px 8px rgba($color: #002b4e, $alpha: 0.3);
+                    text-shadow: 0px 6px 6px rgba($color: $blue, $alpha: 0.2);
                     animation: title 0.5s ease forwards;
                 }
                 .formSignInInputs {
@@ -49,27 +49,30 @@
                     animation: inputs 0.4s linear forwards;
                     label {
                         font-family: $secondary;
-                        font-weight: 700;
-                        color: #002b4e;
+                        font-weight: 500;
+                        color: rgba($color: $black, $alpha: 1);
                         margin-bottom: 10px;
+                        margin-left: 10px;
                     }
                     input {
-                        border: unset;
-                        border-bottom: 2px solid rgba($color: $gray, $alpha: 0.3);
+                        border-radius: 4px;
+                        border: 2px solid rgba($color: $blue, $alpha: 0.1);
                         padding: 10px 0px 10px 10px;
                         margin-bottom: 20px;
                         transition: all 0.2s ease;
                         font-family: $secondary;
+                        color: $blue;
                         cursor: pointer;
                         &::placeholder {
                             font-family: $secondary;
                             font-size: 14px;
                             opacity: 0.3;
                             transition: all 0.2s ease;
+                            font-weight: 400;
                         }
                         &:focus {
                             cursor: auto;
-                            background-color: rgba($color: #002b4e, $alpha: 0.1);
+                            background-color: rgba($color: $bgGray, $alpha: 1);
                             &::placeholder {
                                 transform: translate(20px, 0px);
                                 opacity: 0;
@@ -87,7 +90,7 @@
                         text-transform: uppercase;
                         font-size: 18px;
                         font-weight: 700;
-                        transition: all 0.2s ease;
+                        transition: all 0.1s ease;
                         margin-bottom: 20px;
                         &:hover {
                             background-color: white;
@@ -118,14 +121,14 @@
                     }
                     button {
                         border: none;
-                        border: 2px solid rgba($color: $gray, $alpha: 0.4);
+                        border: 2px solid rgba($color: #ea4235, $alpha: 1);
                         width: 100%;
                         border-radius: 4px;
                         padding: 10px 0px;
-                        background: transparent;
+                        background: #ea4235;
                         margin-top: 20px;
                         text-transform: uppercase;
-                        color: $blue;
+                        color: #fff;
                         font-family: $secondary;
                         font-weight: 700;
                         align-items: center;
@@ -134,15 +137,17 @@
                         justify-content: center;
                         grid-column-gap: 10px;
                         letter-spacing: 1px;
-                        transition: all 0.2s ease;
+                        transition: all 0.1s ease;
                         svg {
                             font-size: 20px;
-                            transition: all 0.5s ease;
+                            transition: all 0.1s ease;
+                            color: #fff;
                         }
                         &:hover {
-                            border-color: $blue;
+                            background: #fff;
+                            color: #ea4235;
                             svg {
-                                transform: rotate(-20deg) scale(1.1, 1.1);
+                                color: #ea4235;
                             }
                         }
                     }
@@ -150,13 +155,16 @@
                 .formSignInInfo {
                     animation: inputs 0.4s linear forwards;
                     font-family: $secondary;
+                    display: grid;
+                    grid-template-columns: repeat(2, auto);
+                    justify-content: start;
+                    gap: 20px;
                     a {
                         font-weight: 500;
                         color: $blue;
                     }
                     p {
-                        margin-top: 10px;
-                        margin-bottom: 10px;
+                        color: rgba($color: $gray, $alpha: 0.5);
                     }
                     .btnGoHome {
                         width: 100%;

@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      {location.pathname != "/Autorizahion" && (
+      {location.pathname != "/Authorization" && (
         <footer id="footer" className={s.footer}>
           <div className="box">
             <div className={s.footerInner}>
@@ -228,7 +228,7 @@ export const Footer: React.FC = () => {
                       <div className={s.footerInfoItem}>
                         <span>1642 Washington Avenue, Jackson, MS, 39201</span>
                         <a target={"_blank"} href="https://www.google.com/">
-                          Driving derections
+                          Driving directions
                           <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                       </div>
@@ -253,7 +253,7 @@ export const Footer: React.FC = () => {
                     <div className={s.footerInfoItem}>
                       <span>1642 Washington Avenue, Jackson, MS, 39201</span>
                       <a target={"_blank"} href="https://www.google.com/">
-                        Driving derections
+                        Driving directions
                         <FontAwesomeIcon icon={faArrowRight} />
                       </a>
                     </div>

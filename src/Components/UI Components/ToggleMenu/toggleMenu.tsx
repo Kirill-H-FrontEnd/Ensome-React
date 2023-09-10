@@ -30,13 +30,11 @@ const AccordionItem = ({ ...rest }) => (
 interface IToggleMenuProps {
   active: boolean;
   setActiveToggle: React.Dispatch<SetStateAction<boolean>>;
-  setBurgerActive: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export const ToggleMenu: React.FC<IToggleMenuProps> = ({
   active,
   setActiveToggle,
-  setBurgerActive,
 }) => {
   const body = document.querySelector("body");
   if (active) {
@@ -128,7 +126,6 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
       <section
         onClick={() => {
           setActiveToggle(false);
-          setBurgerActive(false);
         }}
         className={`${s.toggleWrapper} ${active ? s.active : ""}`}
       >
@@ -138,7 +135,6 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
             <span
               onClick={() => {
                 setActiveToggle(false);
-                setBurgerActive(false);
               }}
             >
               <FontAwesomeIcon icon={faClose} />
@@ -166,7 +162,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
                         className={({ isActive }) => (isActive ? s.active : "")}
                         onClick={() => {
                           setActiveToggle(false);
-                          setBurgerActive(false);
+
                           toggle(false);
                         }}
                         to={link.href1}
@@ -177,7 +173,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
                         className={({ isActive }) => (isActive ? s.active : "")}
                         onClick={() => {
                           setActiveToggle(false);
-                          setBurgerActive(false);
+
                           toggle(false);
                         }}
                         to={link.href2}
@@ -188,7 +184,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
                         className={({ isActive }) => (isActive ? s.active : "")}
                         onClick={() => {
                           setActiveToggle(false);
-                          setBurgerActive(false);
+
                           toggle(false);
                         }}
                         to={link.href3}
@@ -199,7 +195,7 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
                         className={({ isActive }) => (isActive ? s.active : "")}
                         onClick={() => {
                           setActiveToggle(false);
-                          setBurgerActive(false);
+
                           toggle(false);
                         }}
                         to={link.href4}

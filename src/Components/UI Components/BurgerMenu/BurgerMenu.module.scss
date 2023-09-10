@@ -1,22 +1,16 @@
+@import "../../../scss/vars.scss";
 .burgerWrapper {
     display: none;
     position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
     z-index: 1000;
-    transition: all 0.4s ease;
-    opacity: 1;
-    width: 50px;
+    width: 40px;
     height: 40px;
-    padding: 10px;
-    border-radius: 6px;
-    &.active {
-        opacity: 0;
-        .burgerMenu {
-            transition: all 0.3s ease;
-            grid-row-gap: 0px;
-        }
-    }
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.1);
+
     .burgerMenu {
         position: absolute;
         top: 50%;
@@ -26,9 +20,9 @@
         grid-row-gap: 5px;
         span {
             display: block;
-            width: 35px;
-            height: 4px;
-            background-color: #002b4e;
+            width: 25px;
+            height: 3px;
+            background-color: $blue;
             border-radius: 10px;
             transition: all 0.2s ease;
         }

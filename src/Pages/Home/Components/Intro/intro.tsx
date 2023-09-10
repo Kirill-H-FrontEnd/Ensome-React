@@ -5,12 +5,12 @@ import Marquee from "react-fast-marquee";
 // import Atropos component
 import Atropos from "atropos/react";
 import Button from "@mui/material/Button";
-// FornAwesome
+// FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 // Router
 import { Link } from "react-router-dom";
-// Imgs
+// Images
 import IntroImg from "Images/HomePage/Intro/IntroImg.jpg";
 import logo1 from "Images/HomePage/Intro/logo1.svg";
 import logo2 from "Images/HomePage/Intro/logo2.svg";

@@ -4,7 +4,7 @@ import "atropos/css";
 // Router
 import { Route, Routes, useLocation } from "react-router-dom";
 // Pages
-import { Logout } from "Components/Layout";
+import { Layout } from "Components/Layout";
 import { Home } from "Pages/Home/Home";
 import { Services } from "Pages/Services/Services";
 import { AboutUs } from "Pages/AboutUs/aboutUs";
@@ -15,11 +15,11 @@ import { OurTeam } from "Pages/OurTeam/OurTeam";
 import { TeamCard } from "Pages/TeamCard/teamCard";
 import { FAQ } from "Pages/FAQ/FAQ";
 import { Solutions } from "Pages/Solutions/Solutions";
-import { Notfoundpage } from "Pages/Notfoundpage/Notfoundpage";
-import { Autorizahion } from "Pages/Autorizahion/Autorizahion";
+import { Authorization } from "Pages/Authorization/Authorization";
 import { useScrollTop } from "Hooks/useScrollTop";
 import { TodoApp } from "Pages/TodoApp/TodoApp";
 import { useEffect } from "react";
+import { NotFoundPage } from "Pages/NotFoundPage/Notfoundpage";
 
 function App() {
   // Title Page
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Logout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="Services" element={<Services />} />
         <Route path="AboutUs" element={<AboutUs />} />
@@ -44,8 +44,8 @@ function App() {
         <Route path="FAQ" element={<FAQ />} />
         <Route path="Solutions" element={<Solutions />} />
         <Route path="TodoApp" element={<TodoApp />} />
-        <Route path="Autorizahion" element={<Autorizahion />} />
-        <Route path="*" element={<Notfoundpage />} />
+        <Route path="Authorization" element={<Authorization />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
