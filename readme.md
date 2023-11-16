@@ -1,1 +1,2 @@
-# Ensome Landig Page: React | Type-Script | SCSS Modules | JSON Server |
+# Ensome | Web-site (in developing)
+# React | Type-Script | SCSS | JSON Server 
