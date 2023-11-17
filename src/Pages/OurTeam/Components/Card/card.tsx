@@ -8,11 +8,9 @@ import { ICardTeam } from "Models/teamCard";
 import { useQuery } from "react-query";
 // Axios
 import axios from "axios";
-// Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
 // Components
 import { Loader } from "Components/Loader/Loader";
+import { Error } from "Components/Error/Error";
 
 function Card() {
   const {
@@ -35,14 +33,7 @@ function Card() {
           <Loader />
         </div>
       )}
-      {isError && (
-        <div className={s.errorTeam}>
-          <h1>Data error! Data not received...</h1>
-          <a href="">
-            <FontAwesomeIcon icon={faArrowsRotate} />
-          </a>
-        </div>
-      )}
+      {isError && <Error value="Data error! Team cards not loaded..." />}
       {isSuccess &&
         resp.data.map((card: ICardTeam) => (
           <Link

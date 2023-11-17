@@ -9,6 +9,7 @@ import { useQuery } from "react-query";
 import { Loader } from "Components/Loader/Loader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
+import { Error } from "Components/Error/Error";
 
 interface IPostProps {
   page: number;
@@ -42,14 +43,7 @@ export const Post: React.FC<IPostProps> = ({ page, postQuery }) => {
           <Loader />
         </span>
       )}
-      {isError && (
-        <span className={s.error}>
-          <h1>Data error! Posts not loaded...</h1>
-          <a href="">
-            <FontAwesomeIcon icon={faArrowsRotate} />
-          </a>
-        </span>
-      )}
+      {isError && <Error value="Data error! Posts not loaded..." />}
       {isSuccess &&
         filterPosts.map((post: IPost) => (
           <div key={post.id} className={s.blogPostsItem}>

@@ -15,6 +15,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 // Components
 import { Loader } from "Components/Loader/Loader";
+import { Error } from "Components/Error/Error";
 
 export const Slider: React.FC = () => {
   useAnimate(s.active);
@@ -53,10 +54,7 @@ export const Slider: React.FC = () => {
                   </div>
                 )}
                 {isError && (
-                  <span className={s.error}>
-                    <h1>Data error! Posts not loaded...</h1>
-                    <a href=""></a>
-                  </span>
+                  <Error value="Data error! Comments not loaded..." />
                 )}
                 {isSuccess &&
                   resp?.data.map((slide: TComment, i: number) => (

@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
 import { Loader } from "Components/Loader/Loader";
+import { Error } from "Components/Error/Error";
 
 export const PopularPost: React.FC = () => {
   const {
@@ -34,14 +35,7 @@ export const PopularPost: React.FC = () => {
           <Loader />
         </span>
       )}
-      {isError && (
-        <span className={s.error}>
-          <h1>Data error! Posts not loaded...</h1>
-          <a href="">
-            <FontAwesomeIcon icon={faArrowsRotate} />
-          </a>
-        </span>
-      )}
+      {isError && <Error value="Data error! Posts not loaded..." />}
       {isSuccess &&
         resp.data.map((post: IPopularPost) => (
           <div key={post.id} className={s.blogSideBarPostsItem}>

@@ -54,7 +54,7 @@ export const BlogContent: React.FC = () => {
     setSearchParams({ post: query });
   };
   // Arrays items
-  const acardionBlogItems = [
+  const accordionBlogItems = [
     {
       title: "Machine learning",
       value1: "Software development",
@@ -173,7 +173,7 @@ export const BlogContent: React.FC = () => {
                   transition
                   transitionTimeout={200}
                 >
-                  {acardionBlogItems.map((slide, i) => (
+                  {accordionBlogItems.map((slide, i) => (
                     <AccordionItem
                       key={i}
                       header={
