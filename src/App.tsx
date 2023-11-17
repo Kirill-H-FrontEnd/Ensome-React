@@ -10,7 +10,7 @@ import { Services } from "./Pages/Services/Services";
 import { AboutUs } from "./Pages/AboutUs/aboutUs";
 import { Blog } from "./Pages/Blog/blog";
 import { BlogPost } from "./Pages/BlogPost/blogPost";
-import { Contacts } from "./Pages/Contacts/Contacts";
+// import { Contacts } from "./Pages/Contacts/Contacts";
 import { OurTeam } from "./Pages/OurTeam/OurTeam";
 import { TeamCard } from "./Pages/TeamCard/teamCard";
 import { FAQ } from "./Pages/FAQ/FAQ";
@@ -19,7 +19,7 @@ import { Authorization } from "./Pages/Authorization/Authorization";
 import { useScrollTop } from "./Hooks/useScrollTop";
 import { TodoApp } from "./Pages/TodoApp/TodoApp";
 import { useEffect } from "react";
-import { NotFoundPage } from "./Pages/NotFoundPage/Notfoundpage";
+// import { NotFoundPage } from "./Pages/NotFoundPage/Notfoundpage";
 
 function App() {
   // Title Page
@@ -38,14 +38,14 @@ function App() {
         <Route path="AboutUs" element={<AboutUs />} />
         <Route path="Blog" element={<Blog />} />
         <Route path="Blog/:postsId" element={<BlogPost />} />
-        <Route path="Contacts" element={<Contacts />} />
+        {/* <Route path="Contacts" element={<Contacts />} /> */}
         <Route path="OurTeam" element={<OurTeam />} />
         <Route path="OurTeam/:name/:id/" element={<TeamCard />} />
         <Route path="FAQ" element={<FAQ />} />
         <Route path="Solutions" element={<Solutions />} />
         <Route path="TodoApp" element={<TodoApp />} />
         <Route path="Authorization" element={<Authorization />} />
-        <Route path="*" element={<NotFoundPage />} />
+        {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Route>
     </Routes>
   );
