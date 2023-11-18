@@ -13,9 +13,9 @@ export const Authorization: React.FC = () => {
   const [activeSignUp, setActiveSignUp] = useState(false);
 
   if (activeSignUp) {
-    document.title = "Sign Up";
+    document.title = "Ensome | Sign Up";
   } else {
-    document.title = "Sign In";
+    document.title = "Ensome | Sign In";
   }
   return (
     <>

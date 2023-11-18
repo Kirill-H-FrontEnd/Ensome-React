@@ -9,7 +9,7 @@ import { FormSub } from "Components/FormSub/FormSub";
 import { Slider } from "Components/Slider/Slider";
 
 export const Home: React.FC = () => {
-  document.title = "Ensome";
+  document.title = "Ensome | Home";
   return (
     <>
       <Intro />

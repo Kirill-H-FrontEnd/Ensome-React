@@ -19,12 +19,11 @@ import { Authorization } from "./Pages/Authorization/Authorization";
 import { useScrollTop } from "./Hooks/useScrollTop";
 import { TodoApp } from "./Pages/TodoApp/TodoApp";
 import { useEffect } from "react";
-// import { NotFoundPage } from "./Pages/NotFoundPage/Notfoundpage";
-
+import { NotFoundPage } from "./Pages/404/404";
 function App() {
   // Title Page
   let location = useLocation();
-  document.title = location.pathname.replace("/", "");
+  document.title = location.pathname.replace("/", "Ensome | ");
   // Scroll page to top
   useEffect(() => {
     useScrollTop();
@@ -45,7 +44,7 @@ function App() {
         <Route path="Solutions" element={<Solutions />} />
         <Route path="TodoApp" element={<TodoApp />} />
         <Route path="Authorization" element={<Authorization />} />
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
