@@ -1,6 +1,5 @@
 // Styles
 import styles from "./HeaderPage.module.scss";
-
 interface IHeaderPageProps {
   title: string | undefined;
   supTitle: string | undefined;

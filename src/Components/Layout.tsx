@@ -11,14 +11,14 @@ function Layout() {
   const [activeToggle, setActiveToggle] = useState<boolean>(false);
   // Animate blocks
   function useAnimate() {
-    let anims = document.querySelectorAll(".animate");
-    for (let i = 0; i < anims.length; i++) {
+    let anim = document.querySelectorAll(".animate");
+    for (let i = 0; i < anim.length; i++) {
       let windowH = window.innerHeight;
-      let elementTop = anims[i].getBoundingClientRect().top;
-      let elementVisble = 150;
+      let elementTop = anim[i].getBoundingClientRect().top;
+      let elementVisible = 150;
 
-      if (elementTop < windowH - elementVisble) {
-        anims[i].classList.add("active");
+      if (elementTop < windowH - elementVisible) {
+        anim[i].classList.add("active");
       }
     }
   }

@@ -1,7 +1,6 @@
 import React, { SetStateAction } from "react";
 // Styles
 import s from "./BurgerMenu.module.scss";
-
 interface IBurgerMenuProps {
   setActiveToggle: React.Dispatch<SetStateAction<boolean>>;
 }

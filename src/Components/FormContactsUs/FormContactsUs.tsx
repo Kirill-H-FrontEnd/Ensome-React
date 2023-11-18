@@ -10,7 +10,7 @@ export const FormContactsUs: React.FC = () => {
   // AnimateBlock
   useAnimate(s.active);
   // Arrays
-  const adressItems = [
+  const addressItems = [
     {
       title: "Email address",
       value: "ensome@info.co.us",
@@ -39,7 +39,7 @@ export const FormContactsUs: React.FC = () => {
                 corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.
               </p>
               <div className={s.contactsUsInfoContent}>
-                {adressItems.map((item, i) => (
+                {addressItems.map((item, i) => (
                   <div key={i}>
                     <span>{item.title}</span>
                     <h5>{item.value}</h5>
