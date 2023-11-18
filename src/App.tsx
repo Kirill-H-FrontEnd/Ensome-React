@@ -10,7 +10,7 @@ import { Services } from "./Pages/Services/Services";
 import { AboutUs } from "./Pages/AboutUs/aboutUs";
 import { Blog } from "./Pages/Blog/blog";
 import { BlogPost } from "./Pages/BlogPost/blogPost";
-import { Contacts } from "./Pages/Contacts/Contacts";
+import { ContactsForm } from "./Pages/ContactsForm/ContactsForm";
 import { OurTeam } from "./Pages/OurTeam/OurTeam";
 import { TeamCard } from "./Pages/TeamCard/teamCard";
 import { FAQ } from "./Pages/FAQ/FAQ";
@@ -37,7 +37,7 @@ function App() {
         <Route path="AboutUs" element={<AboutUs />} />
         <Route path="Blog" element={<Blog />} />
         <Route path="Blog/:postsId" element={<BlogPost />} />
-        <Route path="Contacts" element={<Contacts />} />
+        <Route path="Contacts" element={<ContactsForm />} />
         <Route path="OurTeam" element={<OurTeam />} />
         <Route path="OurTeam/:name/:id/" element={<TeamCard />} />
         <Route path="FAQ" element={<FAQ />} />
