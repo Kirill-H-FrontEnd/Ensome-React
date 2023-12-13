@@ -132,13 +132,6 @@ export const ToggleMenu: React.FC<IToggleMenuProps> = ({
         <section onClick={(e) => e.stopPropagation()} className={s.toggleMenu}>
           <div className={s.toggleMenuHeader}>
             <img src={LogoWhite} alt="" />
-            <span
-              onClick={() => {
-                setActiveToggle(false);
-              }}
-            >
-              <FontAwesomeIcon icon={faClose} />
-            </span>
           </div>
           <section className={s.toggleItems}>
             <Accordion

@@ -1,5 +1,7 @@
 // Styles
 import s from "./Authorization.module.scss";
+// Icons
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -45,7 +47,7 @@ export const Authorization: React.FC = () => {
               <div className={s.formSignInInfo}>
                 <Link to={""}>Forgot password?</Link>
                 <p>
-                  Dont have an account?
+                  Don`t have an account?
                   <Link
                     onClick={() => {
                       setActiveSignIn(true);
@@ -58,9 +60,6 @@ export const Authorization: React.FC = () => {
                   </Link>
                   <br />
                 </p>
-                <Link to={"/"} className={s.btnGoHome}>
-                  Go Home
-                </Link>
               </div>
             </form>
             <form className={` ${activeSignUp ? s.active : ""}`}>
@@ -90,11 +89,12 @@ export const Authorization: React.FC = () => {
                     Sign in
                   </Link>
                 </p>
-                <Link to={"/"} className={s.btnGoHome}>
-                  Go Home
-                </Link>
               </div>
             </form>
+            <Link className={s.btnHome} to={"/"}>
+              <FontAwesomeIcon icon={faArrowLeft} />
+              Back to home page
+            </Link>
           </section>
         </section>
       </section>

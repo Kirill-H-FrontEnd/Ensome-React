@@ -9,8 +9,7 @@
             text-align: center;
             h2 {
                 color: $black;
-                font-family: $secondary;
-                font-weight: 800;
+                font-weight: 700;
                 font-size: $title1;
             }
         }
@@ -28,13 +27,12 @@
                 h3 {
                     color: $blue;
                     font-size: 56px;
-                    font-weight: 800;
+                    font-weight: 700;
                     margin-bottom: 20px;
                 }
                 pre {
                     color: $gray;
-                    font-weight: 600;
-                    font-family: $primary;
+                    font-weight: 500;
                 }
             }
         }

@@ -12,7 +12,7 @@ import { HeaderPage } from "Components/HeaderPage/HeaderPage";
 import { IPost } from "Models/postBlog";
 
 export const BlogPost: React.FC = () => {
-  const { postsId } = useParams();
+  const { id } = useParams();
   const [post, setPost] = useState<IPost>();
 
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ export const BlogPost: React.FC = () => {
   const fetchDataPosts = async () => {
     try {
       const resp = await axios.get<IPost>(
-        `http://localhost:3001/blogPosts/${postsId}`
+        `http://localhost:3001/blogPosts/${id}`
       );
       setPost(resp.data);
     } catch (e: unknown) {}
@@ -29,7 +29,7 @@ export const BlogPost: React.FC = () => {
 
   useEffect(() => {
     fetchDataPosts();
-  }, [postsId]);
+  }, [id]);
   return (
     <>
       <HeaderPage title={post?.title} supTitle={`Post ${post?.id}`} />

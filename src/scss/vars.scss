@@ -4,13 +4,12 @@ $black: #292d33;
 $gray: #9497a1;
 $bgGray: #f1f6fa;
 // Font-Size
-$title1: 46px;
-$title2: 30px;
-$title3: 22px;
-$text: 20px;
+$title1: 44px;
+$title2: 28px;
+$title3: 20px;
+$text: 18px;
 // Font
-$primary: "Open Sans", sans-serif;
-$secondary: "Manrope", sans-serif;
+$primary: "Inter", sans-serif;
 
 // Buttons
 
@@ -18,12 +17,13 @@ $secondary: "Manrope", sans-serif;
     border: unset;
     text-transform: capitalize;
     background-color: $blue;
-    padding: 13px 45px;
+    padding: 10px 30px;
+    font-size: 14px;
     box-shadow: 0px 12px 30px rgba(24, 92, 255, 0.2);
     border-radius: 4px;
     color: white;
-    font-family: $secondary;
-    font-weight: 600;
+    font-weight: 500;
+    text-transform: uppercase;
     transition: all 0.2s ease;
     position: relative;
     z-index: 1;

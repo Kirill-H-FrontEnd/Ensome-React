@@ -4,28 +4,24 @@
     text-align: center;
     .NotFoundPageContent {
         h1 {
-            font-size: 200px;
+            font-size: 180px;
             color: $blue;
-            font-family: $secondary;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 10px;
             text-shadow: 6px 6px 0px rgba($color: $blue, $alpha: 0.3);
         }
         h2 {
-            font-family: $secondary;
-            text-transform: uppercase;
-            font-weight: 800;
+            font-weight: 500;
             font-size: $title1;
             margin-bottom: 30px;
         }
 
         a {
-            padding: 8px 40px;
-            font-size: 20px;
+            padding: 8px 30px;
+            font-size: 18px;
             color: $blue;
             border: 2px solid $blue;
             border-radius: 6px;
-            text-transform: uppercase;
             font-weight: 600;
             transition: all 0.2s ease;
             &:hover {

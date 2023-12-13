@@ -10,8 +10,7 @@
             h2 {
                 font-size: $title1;
                 color: $black;
-                font-weight: 800;
-                font-family: $secondary;
+                font-weight: 700;
                 line-height: 60px;
                 margin-bottom: 30px;
                 opacity: 0;
@@ -20,6 +19,7 @@
             p {
                 font-size: $text;
                 color: $gray;
+                font-weight: 400;
                 line-height: 33px;
                 opacity: 0;
                 transform: translate(0px, 50px);
@@ -61,20 +61,20 @@
                 border-radius: 6px;
                 padding: 46px 35px;
                 img {
-                    margin-bottom: 50px;
+                    margin-bottom: 40px;
                     border: 2px solid #f1f6fa;
                     border-radius: 6px;
-                    padding: 15px 17px;
+                    padding: 13px 15px;
                 }
                 h3 {
                     font-size: $title3;
-                    font-weight: 700;
+                    font-weight: 600;
                     color: $black;
-                    font-family: $secondary;
                     margin-bottom: 15px;
                 }
                 p {
                     line-height: 28px;
+                    font-weight: 400;
                     color: $gray;
                 }
             }

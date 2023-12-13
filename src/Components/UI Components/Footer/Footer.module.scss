@@ -12,7 +12,7 @@
             .footerLogo {
                 transition: all 0.2s ease;
                 img {
-                    width: 150px;
+                    width: 120px;
                     height: 40px;
                 }
                 &:hover {
@@ -25,8 +25,7 @@
                 grid-column-gap: 130px;
                 .footerPagesItem {
                     h3 {
-                        font-family: $secondary;
-                        font-weight: 700;
+                        font-weight: 600;
                         color: $black;
                         margin-bottom: 20px;
                         svg {
@@ -52,7 +51,8 @@
                             display: grid;
                         }
                         a {
-                            color: $black;
+                            font-size: 14px;
+                            color: $gray;
                             transition: all 0.2s ease;
                             position: relative;
                             &::after {
@@ -88,8 +88,7 @@
                             .accordionBtn {
                                 color: $black;
                                 padding: 10px 0px 10px 0px;
-                                font-family: $secondary;
-                                font-weight: 700;
+                                font-weight: 500;
                                 width: 100%;
                                 text-align: left;
                                 border: none;
@@ -111,9 +110,8 @@
                             .accordionPanel {
                                 display: grid;
                                 a {
-                                    font-size: 16px;
-                                    font-family: $secondary;
-                                    color: $black;
+                                    font-size: 14px;
+                                    color: $gray;
                                     font-weight: 500;
                                     padding: 15px 0px 15px 0px;
                                     transition: all 0.2s ease;
@@ -132,7 +130,6 @@
                                         font-size: 14px;
                                         font-weight: 600;
                                         color: $black;
-                                        font-family: $secondary;
                                         &:hover {
                                             svg {
                                                 transform: translate(10px, 0px);
@@ -170,8 +167,7 @@
             margin-bottom: 10px;
             h3 {
                 position: relative;
-                font-family: $secondary;
-                font-weight: 700;
+                font-weight: 600;
                 color: $black;
                 padding: 20px 10px 20px 10px;
                 &.active {
@@ -204,9 +200,8 @@
                         }
                         a {
                             font-size: 14px;
-                            font-weight: 600;
+                            font-weight: 500;
                             color: $black;
-                            font-family: $secondary;
                             &:hover {
                                 svg {
                                     transform: translate(10px, 0px);
@@ -292,6 +287,7 @@
                 grid-column-gap: 90px;
                 a {
                     color: $gray;
+                    font-size: 14px;
                     &:hover {
                         svg {
                             transform: translate(10px, 0px);

@@ -16,7 +16,6 @@
                 margin-bottom: 20px;
                 font-size: $title3;
                 font-weight: 700;
-                font-family: $secondary;
                 color: $black;
             }
             p {
@@ -28,7 +27,6 @@
                 color: $blue;
                 font-size: 14px;
                 font-weight: 600;
-                font-family: $secondary;
                 &:hover {
                     svg {
                         transform: translate(10px, 0px);

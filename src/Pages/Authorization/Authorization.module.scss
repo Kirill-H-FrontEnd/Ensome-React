@@ -8,15 +8,35 @@
     background-size: cover;
     overflow: hidden;
     position: relative;
+
     .AuthorizationInner {
         display: grid;
         grid-template-columns: 500px;
         position: relative;
+        .btnHome {
+            position: absolute;
+            top: 10px;
+            left: 25px;
+            font-size: 14px;
+            color: gray;
+            font-weight: 400;
+            &:hover {
+                svg {
+                    margin-right: 7px;
+                }
+            }
+            svg {
+                transition: all 0.2s ease;
+                font-size: 12px;
+                margin-right: 5px;
+            }
+        }
         .AuthorizationForms {
             box-shadow: 0px 0px 10px rgba($color: $black, $alpha: 0.3);
             height: 100vh;
             background-color: white;
             position: relative;
+
             form {
                 position: absolute;
                 top: 50%;
@@ -35,10 +55,9 @@
                     }
                 }
                 h1 {
-                    font-family: $secondary;
-                    font-weight: 800;
+                    font-weight: 600;
                     color: $blue;
-                    font-size: 80px;
+                    font-size: 70px;
                     margin-bottom: 10px;
                     text-shadow: 0px 6px 6px rgba($color: $blue, $alpha: 0.2);
                     animation: title 0.5s ease forwards;
@@ -48,11 +67,9 @@
                     display: grid;
                     animation: inputs 0.4s linear forwards;
                     label {
-                        font-family: $secondary;
-                        font-weight: 500;
+                        font-weight: 400;
                         color: rgba($color: $black, $alpha: 1);
                         margin-bottom: 10px;
-                        margin-left: 10px;
                     }
                     input {
                         border-radius: 4px;
@@ -60,11 +77,9 @@
                         padding: 10px 0px 10px 10px;
                         margin-bottom: 20px;
                         transition: all 0.2s ease;
-                        font-family: $secondary;
                         color: $blue;
                         cursor: pointer;
                         &::placeholder {
-                            font-family: $secondary;
                             font-size: 14px;
                             opacity: 0.3;
                             transition: all 0.2s ease;
@@ -84,12 +99,11 @@
                         border-radius: 4px;
                         border: none;
                         background-color: $blue;
-                        padding: 10px 0px;
+                        padding: 12px 0px;
                         color: white;
-                        font-family: $secondary;
                         text-transform: uppercase;
-                        font-size: 18px;
-                        font-weight: 700;
+                        font-size: 14px;
+                        font-weight: 500;
                         transition: all 0.1s ease;
                         margin-bottom: 20px;
                         &:hover {
@@ -103,7 +117,6 @@
                     margin-bottom: 30px;
                     animation: inputs 0.4s linear forwards;
                     p {
-                        font-family: $secondary;
                         color: $gray;
                         text-align: center;
                         position: relative;
@@ -120,6 +133,7 @@
                         }
                     }
                     button {
+                        font-size: 14px;
                         border: none;
                         border: 2px solid rgba($color: #ea4235, $alpha: 1);
                         width: 100%;
@@ -129,8 +143,7 @@
                         margin-top: 20px;
                         text-transform: uppercase;
                         color: #fff;
-                        font-family: $secondary;
-                        font-weight: 700;
+                        font-weight: 500;
                         align-items: center;
                         display: grid;
                         grid-template-columns: auto auto;
@@ -139,7 +152,7 @@
                         letter-spacing: 1px;
                         transition: all 0.1s ease;
                         svg {
-                            font-size: 20px;
+                            font-size: 16px;
                             transition: all 0.1s ease;
                             color: #fff;
                         }
@@ -154,23 +167,18 @@
                 }
                 .formSignInInfo {
                     animation: inputs 0.4s linear forwards;
-                    font-family: $secondary;
                     display: grid;
                     grid-template-columns: repeat(2, auto);
                     justify-content: start;
                     gap: 20px;
                     a {
-                        font-weight: 500;
+                        font-size: 14px;
+                        font-weight: 400;
                         color: $blue;
                     }
                     p {
+                        font-size: 14px;
                         color: rgba($color: $gray, $alpha: 0.5);
-                    }
-                    .btnGoHome {
-                        width: 100%;
-                        color: $blue;
-                        font-size: 16px;
-                        font-family: $secondary;
                     }
                 }
             }

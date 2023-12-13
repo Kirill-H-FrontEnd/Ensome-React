@@ -30,9 +30,6 @@
             grid-gap: 30px;
             .message {
                 position: absolute;
-                span {
-                    font-family: $secondary;
-                }
             }
             .teamCard {
                 text-align: center;
@@ -85,7 +82,6 @@
                         font-size: 20px;
                         color: $black;
                         font-weight: 700;
-                        font-family: $secondary;
                         &:nth-of-type(1) {
                             margin-right: 10px;
                         }

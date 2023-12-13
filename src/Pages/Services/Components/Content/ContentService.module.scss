@@ -14,7 +14,6 @@
                 font-size: $title2;
                 color: $black;
                 margin-bottom: 30px;
-                font-family: $secondary;
                 font-weight: 800;
             }
             p {
@@ -32,7 +31,6 @@
             h4 {
                 font-size: $title3;
                 color: $black;
-                font-family: $secondary;
                 font-weight: 700;
                 margin-bottom: 30px;
             }
@@ -48,13 +46,11 @@
                     padding: 13px 0px 13px 10px;
                     border-radius: 6px;
                     cursor: pointer;
-                    font-family: $secondary;
                     transition: all 0.2s ease;
                     &::placeholder {
                         color: $black;
                         font-size: 14px;
                         font-weight: 700;
-                        font-family: $secondary;
                         letter-spacing: 1px;
                         transition: all 0.2s ease;
                     }
@@ -95,7 +91,6 @@
                         }
                         .accordionBtn {
                             color: $black;
-                            font-family: $secondary;
                             padding: 10px 0px 10px 10px;
                             width: 100%;
                             text-align: left;
@@ -118,7 +113,6 @@
                             display: grid;
                             a {
                                 font-size: 16px;
-                                font-family: $secondary;
                                 color: $black;
                                 font-weight: 500;
                                 padding: 20px 0px 20px 20px;

@@ -16,14 +16,14 @@
                 h2 {
                     font-size: $title1;
                     color: $black;
-                    font-weight: 800;
-                    font-family: $secondary;
+                    font-weight: 700;
                     margin-bottom: 30px;
                 }
                 p {
+                    font-weight: 400;
+                    font-size: 18px;
                     color: $gray;
                     line-height: 33px;
-                    font-size: 20px;
                 }
             }
             figure {
