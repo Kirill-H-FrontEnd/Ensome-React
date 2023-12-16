@@ -37,14 +37,14 @@
                 .blogPostsInfo {
                     margin-top: 30px;
                     display: grid;
-                    grid-row-gap: 20px;
+                    grid-row-gap: 15px;
                     pre {
                         color: $gray;
                         font-size: 14px;
                     }
                     h5 {
                         font-size: $title3;
-                        font-weight: 700;
+                        font-weight: 600;
                         color: $black;
                         line-height: 33px;
                     }
@@ -59,7 +59,7 @@
                     a {
                         color: $blue;
                         font-size: 14px;
-                        font-weight: 600;
+                        font-weight: 500;
                     }
                 }
             }
@@ -70,7 +70,7 @@
             h4 {
                 font-size: $title3;
                 color: $black;
-                font-weight: 700;
+                font-weight: 600;
             }
             form {
                 margin-bottom: 40px;
@@ -87,7 +87,7 @@
                     &::placeholder {
                         color: $gray;
                         font-size: 14px;
-                        font-weight: 700;
+                        font-weight: 500;
                         letter-spacing: 1px;
                         transition: all 0.2s ease;
                     }
@@ -105,11 +105,8 @@
                     width: 100%;
                     margin-top: 10px;
                     border: none;
+                    padding: 14px 0px;
                     @extend %button;
-                    &:hover {
-                        background-color: $blue;
-                        color: white;
-                    }
                 }
             }
             .blogSideBarCategoriesMobil {
@@ -141,7 +138,7 @@
                             font-weight: 400;
                         }
                         h5 {
-                            font-weight: 700;
+                            font-weight: 500;
                             color: $black;
                             line-height: 24px;
                             font-size: 16px;
@@ -149,7 +146,7 @@
                         a {
                             font-size: 14px;
                             color: $blue;
-                            font-weight: 600;
+                            font-weight: 500;
                         }
                     }
                 }
@@ -170,7 +167,7 @@
                             padding: 5px 0px 5px 10px;
                             transition: all 0.1s ease;
                             button {
-                                font-weight: 500;
+                                font-weight: 400;
                                 color: $black;
                                 padding: 10px 0px 10px 10px;
                                 width: 100%;
@@ -198,10 +195,10 @@
                             .accordionPanel {
                                 display: grid;
                                 a {
-                                    font-size: 16px;
+                                    font-size: 14px;
                                     color: $black;
                                     font-weight: 500;
-                                    padding: 20px 0px 20px 20px;
+                                    padding: 15px 0px 15px 20px;
                                     transition: all 0.2s ease;
                                     &:hover {
                                         transform: translate(5px, 0px);
@@ -236,7 +233,7 @@
                         display: inline-block;
                         color: $blue;
                         font-size: 14px;
-                        font-weight: 800;
+                        font-weight: 500;
                         border: 2px solid #9497a133;
                         border-radius: 6px;
                         padding: 5px 10px;

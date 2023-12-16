@@ -15,7 +15,7 @@
             h5 {
                 margin-bottom: 20px;
                 font-size: $title3;
-                font-weight: 700;
+                font-weight: 600;
                 color: $black;
             }
             p {
@@ -26,10 +26,10 @@
             a {
                 color: $blue;
                 font-size: 14px;
-                font-weight: 600;
+                font-weight: 500;
                 &:hover {
                     svg {
-                        transform: translate(10px, 0px);
+                        transform: translate(7px, 0px);
                     }
                 }
                 svg {

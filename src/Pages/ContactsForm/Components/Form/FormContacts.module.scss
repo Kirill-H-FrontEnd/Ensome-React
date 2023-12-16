@@ -10,7 +10,7 @@
                 h2 {
                     font-size: 80px;
                     line-height: 88px;
-                    font-weight: 800;
+                    font-weight: 600;
                     margin-bottom: 30px;
                     span {
                         color: $blue;
@@ -26,7 +26,7 @@
                         h5 {
                             color: $black;
                             font-size: 14px;
-                            font-weight: 600;
+                            font-weight: 500;
                             svg {
                                 margin-right: 10px;
                             }
@@ -34,6 +34,7 @@
                         pre {
                             color: $gray;
                             font-family: $primary;
+                            font-weight: 400;
                         }
                     }
                 }
@@ -54,6 +55,7 @@
                     padding: 14px 0px 14px 10px;
                     cursor: pointer;
                     transition: all 0.1s ease;
+                    font-weight: 500;
                     &:focus {
                         box-shadow: 0px 0px 10px rgba($color: $blue, $alpha: 0.3);
                         border-color: $blue;
@@ -70,7 +72,6 @@
                         font-family: $primary;
                         font-size: 14px;
                         color: $black;
-                        font-weight: 600;
                         transition: all 0.2s ease;
                     }
                 }
@@ -100,7 +101,7 @@
                     &::placeholder {
                         font-size: 14px;
                         color: $black;
-                        font-weight: 600;
+                        font-weight: 500;
                         transition: all 0.2s ease;
                     }
                 }

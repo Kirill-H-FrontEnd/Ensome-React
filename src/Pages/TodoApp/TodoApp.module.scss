@@ -14,7 +14,7 @@
         font-size: 18px;
         &::placeholder {
             color: rgba($color: $black, $alpha: 0.2);
-            font-weight: 400;
+            font-weight: 500;
             font-size: 18px;
             transition: all 0.2s ease;
         }
@@ -31,7 +31,7 @@
 .noTasks {
     text-align: center;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     color: rgba($color: white, $alpha: 0.8);
     background-color: rgba($color: $blue, $alpha: 0.8);
     padding: 15px 0px;
