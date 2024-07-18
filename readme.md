@@ -1,4 +1,4 @@
-# [Ensome | Web-site](https://ensome-web-site-in-developing.vercel.app/)
+# [Ensome | React](https://ensome-web-site-in-developing.vercel.app/)
 
 `📋 Website consisting of more than 10 pages and made taking into account all modern technologies.`
 
