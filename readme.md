@@ -1,5 +1,13 @@
 # [Ensome | Web-site](https://ensome-web-site-in-developing.vercel.app/)
 
-React | Type-Script | SCSS | JSON Server
+`📋 Website consisting of more than 10 pages and made taking into account all modern technologies.`
 
-![Banner Ensome](./public/BannerEnsome.png)
+## 🛠 Skills
+
+This project is used by the following skills:
+
+**Technologies:** `React`, `TypeScript`, `SCSS`
+
+**Libraries:** `JSON Server`, `ReactQuery`, `Framer Motion`, `Axios`, `Atropos`
+
+![Banner](./public/BannerEnsome.png)
