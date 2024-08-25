@@ -5,13 +5,14 @@
 
 
 ## 🤖 About Ensome
-📋 Website consisting of more than 10 pages and made taking into account all modern technologies.
+ Website consisting of more than 10 pages and made taking into account all modern technologies.
 
 ## 🛠 Technologies Used
 
 We've assembled quite the tech stack to bring Ensome to life:
 
 - [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Scss](https://sasscss.org/)
 
 **Libraries:** [`JSON Server`](https://www.npmjs.com/package/json-server), [`ReactQuery`](https://react-query-git-patch-1.tannerlinsley.vercel.app/overview),[`Framer Motion`](https://www.framer.com/motion/), [`Axios`](https://axios-http.com/),[`Atropos`](https://atroposjs.com/)
