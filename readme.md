@@ -12,7 +12,6 @@
 We've assembled quite the tech stack to bring Ensome to life:
 
 - [React](https://react.dev/)
-- [NextJs](https://nextjs.org/)
 - [Scss](https://sasscss.org/)
 
 **Libraries:** [`JSON Server`](https://www.npmjs.com/package/json-server), [`ReactQuery`](https://react-query-git-patch-1.tannerlinsley.vercel.app/overview),[`Framer Motion`](https://www.framer.com/motion/), [`Axios`](https://axios-http.com/),[`Atropos`](https://atroposjs.com/)
