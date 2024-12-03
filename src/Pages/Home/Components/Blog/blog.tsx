@@ -51,6 +51,11 @@ export const Blog: React.FC = () => {
               {blogCard.map((card, i) => (
                 <Atropos
                   key={i}
+                  rotateXMax={5}
+                  rotateYMax={5}
+                  activeOffset={15}
+                  rotateTouch={false}
+                  highlight={false}
                   shadow={false}
                   className={`${s.atropos} animate`}
                 >

@@ -53,6 +53,11 @@ export const Fitches: React.FC = () => {
               {fitchesCards.map((card, i) => (
                 <Atropos
                   key={i}
+                  rotateXMax={8}
+                  rotateYMax={8}
+                  activeOffset={25}
+                  rotateTouch={false}
+                  highlight={false}
                   shadow={false}
                   className={`${s.atropos} animate`}
                 >

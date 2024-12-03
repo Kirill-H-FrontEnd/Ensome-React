@@ -68,9 +68,9 @@ export const Intro: React.FC = () => {
             </section>
             <figure>
               <Atropos
-                rotateXMax={5}
-                rotateYMax={5}
-                activeOffset={15}
+                rotateXMax={8}
+                rotateYMax={8}
+                activeOffset={25}
                 rotateTouch={false}
                 highlight={false}
                 shadow={false}

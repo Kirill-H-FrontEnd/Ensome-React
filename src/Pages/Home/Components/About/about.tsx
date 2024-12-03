@@ -31,14 +31,28 @@ export const About: React.FC = () => {
                 </a>
               </section>
               <figure>
-                <Atropos shadow={false}>
+                <Atropos
+                  rotateXMax={5}
+                  rotateYMax={5}
+                  activeOffset={15}
+                  rotateTouch={false}
+                  highlight={false}
+                  shadow={false}
+                >
                   <img src={imgAbout1} alt="" />
                 </Atropos>
               </figure>
             </section>
             <section className={`${s.aboutBottom} animate`}>
               <figure>
-                <Atropos shadow={false}>
+                <Atropos
+                  rotateXMax={5}
+                  rotateYMax={5}
+                  activeOffset={15}
+                  rotateTouch={false}
+                  highlight={false}
+                  shadow={false}
+                >
                   <img src={imgAbout2} alt="" />
                 </Atropos>
               </figure>
