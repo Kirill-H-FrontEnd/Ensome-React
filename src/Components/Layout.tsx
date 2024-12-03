@@ -4,7 +4,6 @@ import { Header } from "./UI Components/Header/Header";
 import { BtnTop } from "./UI Components/ButtonTop/ButtonTop";
 import { ToggleMenu } from "./UI Components/ToggleMenu/toggleMenu";
 import { useState } from "react";
-import { BurgerMenu } from "./UI Components/BurgerMenu/BurgerMenu";
 import { ToggleMenuProvider } from "../providers/ToggleMenuContext";
 
 function Layout() {

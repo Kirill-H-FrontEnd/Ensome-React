@@ -1,4 +1,3 @@
-import { SetStateAction } from "react";
 // Styles
 import s from "./ToggleMenu.module.scss";
 // Router
@@ -7,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import LogoWhite from "Images/Header/LogoWhite.svg";
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faClose } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 // Accordion
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import { useToggleMenu } from "../../../providers/ToggleMenuContext";
