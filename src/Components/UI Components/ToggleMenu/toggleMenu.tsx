@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faClose } from "@fortawesome/free-solid-svg-icons";
 // Accordion
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
+import { useToggleMenu } from "../../../providers/ToggleMenuContext";
 const AccordionItem = ({ ...rest }) => (
   <Item
     {...rest}
@@ -27,15 +28,8 @@ const AccordionItem = ({ ...rest }) => (
   />
 );
 
-interface IToggleMenuProps {
-  active: boolean;
-  setActiveToggle: React.Dispatch<SetStateAction<boolean>>;
-}
-
-export const ToggleMenu: React.FC<IToggleMenuProps> = ({
-  active,
-  setActiveToggle,
-}) => {
+export const ToggleMenu: React.FC = ({}) => {
+  const { active, setActiveToggle } = useToggleMenu();
   const body = document.querySelector("body");
   if (active) {
     body?.classList.add("hidden");

@@ -13,9 +13,10 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 import { ToggleMenu } from "../ToggleMenu/toggleMenu";
+import { useToggleMenu } from "../../../providers/ToggleMenuContext";
 
 export const Header: React.FC = () => {
-  const [activeToggle, setActiveToggle] = useState<boolean>(false);
+  const { setActiveToggle } = useToggleMenu();
   const [isFixed, setFixed] = useState(false);
   // Hide header on loginPage
   const location = useLocation();
