@@ -22,7 +22,7 @@ import { useEffect } from "react";
 import { NotFoundPage } from "./Pages/404/404";
 function App() {
   // Title Page
-  let location = useLocation();
+  const location = useLocation();
   document.title = location.pathname.replace("/", "Ensome | ");
   // Scroll page to top
   useEffect(() => {

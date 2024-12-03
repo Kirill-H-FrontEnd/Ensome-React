@@ -1,8 +1,8 @@
 @import "../../../scss/vars";
 .btnTop {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 15px;
+    right: 15px;
     background-color: rgba($color: $blue, $alpha: 1);
     width: 40px;
     height: 40px;
@@ -46,7 +46,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        font-size: 20px;
+        font-size: 18px;
         transition: all 0.2s ease;
     }
 }

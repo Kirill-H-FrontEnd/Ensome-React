@@ -67,7 +67,14 @@ export const Intro: React.FC = () => {
               </div>
             </section>
             <figure>
-              <Atropos shadow={false}>
+              <Atropos
+                rotateXMax={5}
+                rotateYMax={5}
+                activeOffset={15}
+                rotateTouch={false}
+                highlight={false}
+                shadow={false}
+              >
                 <img src={IntroImg} alt="" width={600} />
               </Atropos>
             </figure>

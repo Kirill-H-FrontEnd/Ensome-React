@@ -11,8 +11,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 // React
 import { useState } from "react";
+import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
+import { ToggleMenu } from "../ToggleMenu/toggleMenu";
 
 export const Header: React.FC = () => {
+  const [activeToggle, setActiveToggle] = useState<boolean>(false);
   const [isFixed, setFixed] = useState(false);
   // Hide header on loginPage
   const location = useLocation();
@@ -108,6 +111,7 @@ export const Header: React.FC = () => {
                   Get started
                 </Button>
               </div>
+              <BurgerMenu setActiveToggle={setActiveToggle} />
             </section>
           </div>
         </header>

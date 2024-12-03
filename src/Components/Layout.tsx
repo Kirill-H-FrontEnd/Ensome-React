@@ -31,7 +31,6 @@ function Layout() {
       </main>
       <Footer />
       <BtnTop />
-      <BurgerMenu setActiveToggle={setActiveToggle} />
       <ToggleMenu active={activeToggle} setActiveToggle={setActiveToggle} />
     </>
   );
