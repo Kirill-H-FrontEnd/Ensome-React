@@ -42,9 +42,9 @@
                     text-transform: capitalize;
                     border: none;
                     background: transparent;
-                    border: 2px solid #c9dcec;
+                    border: 1px solid #c9dcec;
                     padding: 13px 0px 13px 10px;
-                    border-radius: 6px;
+                    border-radius: 30px;
                     cursor: pointer;
                     transition: all 0.2s ease;
                     &::placeholder {
@@ -69,7 +69,7 @@
                     position: absolute;
                     top: 0;
                     right: 0;
-                    padding: 12px 30px 11px 30px;
+                    padding: 10px 30px 10px 30px;
                     @extend %button;
                     &:hover {
                         background-color: $blue;
@@ -81,12 +81,13 @@
                 display: grid;
                 .accordion {
                     .accordionHeader {
-                        border-bottom: 2px solid #c9dcec;
+                        border-bottom: 1px solid #c9dcec;
                         width: 100%;
                         font-size: 20px;
                         padding: 5px 0px 5px 10px;
                         transition: all 0.1s ease;
                         position: relative;
+
                         &:hover {
                             background-color: #c9dcec;
                         }

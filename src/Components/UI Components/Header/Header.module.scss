@@ -3,13 +3,13 @@ header {
     width: 100%;
     position: fixed;
     padding: 15px 0px;
-    background-color: rgba($color: white, $alpha: 0.8);
+    background-color: rgba($color: white, $alpha: 0.6);
     backdrop-filter: blur(20px);
     top: 0;
     left: 0;
     z-index: 800;
     transition: all 0.3s ease;
-    border-bottom: 1px solid #e9ebf2;
+    border-bottom: 1px solid $borderGray;
     .headerInner {
         display: grid;
         grid-template-columns: repeat(3, auto);

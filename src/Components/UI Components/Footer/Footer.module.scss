@@ -2,12 +2,13 @@
 .footer {
     padding: 50px 0px 0px 0px;
     background-color: $bgGray;
+    border-top: 1px solid $borderGray;
     .footerInner {
         .footerLinks {
             display: grid;
             grid-template-columns: repeat(2, auto);
             justify-content: space-between;
-            border-bottom: 2px solid #c9dcec;
+            border-bottom: 1px solid $borderGray;
             padding-bottom: 40px;
             .footerLogo {
                 transition: all 0.2s ease;
@@ -82,9 +83,9 @@
                     display: none;
                     .accordion {
                         h3 {
-                            border-bottom: 2px solid #c9dcec;
+                            border-bottom: 1px solid $borderGray;
                             width: 100%;
-                            font-size: 18px;
+                            font-size: 16px;
                             padding: 5px 0px 5px 0px;
                             .accordionBtn {
                                 color: $black;
@@ -107,7 +108,6 @@
                         }
                         .accordionContent {
                             transition: height 0.2s ease-in-out;
-                            border-bottom: 2px solid $blue;
                             .accordionPanel {
                                 display: grid;
                                 a {
@@ -164,7 +164,7 @@
             display: grid;
             grid-template-columns: repeat(2, auto);
             justify-content: space-between;
-            border-bottom: 2px solid #c9dcec;
+            border-bottom: 1px solid $borderGray;
             margin-bottom: 10px;
             h3 {
                 position: relative;
@@ -224,7 +224,7 @@
                     justify-content: start;
                     grid-column-gap: 10px;
                     a {
-                        border: 2px solid rgba($color: $blue, $alpha: 0.5);
+                        border: 1px solid rgba($color: $blue, $alpha: 0.5);
                         width: 35px;
                         height: 35px;
                         border-radius: 50%;

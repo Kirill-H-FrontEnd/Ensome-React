@@ -24,7 +24,6 @@
             .footerLinks {
                 .footerLogo {
                     margin-bottom: 20px;
-                    text-align: center;
                 }
                 grid-template-columns: 1fr;
                 border: none;
@@ -70,7 +69,7 @@
                 grid-template-columns: 1fr;
                 padding: 0;
                 .footerCopyrightLinks {
-                    border-bottom: 2px solid $gray;
+                    border-bottom: 1px solid $borderGray;
                     padding-bottom: 10px;
                     grid-column-gap: 30px;
                     a {
@@ -82,7 +81,6 @@
                 }
                 pre {
                     padding-top: 10px;
-                    color: $black;
                 }
             }
         }

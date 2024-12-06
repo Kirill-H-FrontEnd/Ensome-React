@@ -1,5 +1,6 @@
 @media screen and (max-width: 1024px) {
     header {
+        background-color: rgba($color: white, $alpha: 1);
         .headerInner {
             grid-template-columns: repeat(2, auto);
             justify-content: space-between;

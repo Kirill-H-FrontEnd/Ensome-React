@@ -28,7 +28,7 @@ import Img1 from "Images/ServicesPage/Intro/IntroImg1.jpg";
 import Img2 from "Images/ServicesPage/Intro/IntroImg2.jpg";
 
 function ContentServices() {
-  const acardionItems = [
+  const accordionItems = [
     {
       title: "Machine learning",
       value1: "Software development",
@@ -132,7 +132,7 @@ function ContentServices() {
             <form action="">
               <input type="text" placeholder="Search" />
               <Button type="submit" variant="contained">
-                Send
+                Search
               </Button>
             </form>
             <h4>Services</h4>
@@ -141,7 +141,7 @@ function ContentServices() {
               transition
               transitionTimeout={200}
             >
-              {acardionItems.map((slide, i) => (
+              {accordionItems.map((slide, i) => (
                 <AccordionItem
                   key={i}
                   header={

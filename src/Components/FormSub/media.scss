@@ -30,8 +30,9 @@
                 width: 100%;
                 input {
                     background: transparent;
-                    border: 2px solid white;
+                    border: 1px solid white;
                     margin-bottom: 20px;
+                    padding: 10px 35px 10px 35px;
                     &::placeholder {
                         color: white;
                     }
@@ -39,7 +40,7 @@
                 button {
                     position: static;
                     width: 100%;
-                    padding: 14px 35px 14px 35px;
+                    padding: 9px 35px 9px 35px;
                     color: $blue;
                 }
             }

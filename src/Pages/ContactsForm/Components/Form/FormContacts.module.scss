@@ -50,7 +50,7 @@
                 input {
                     width: 100%;
                     margin-bottom: 20px;
-                    border: 2px solid $gray;
+                    border: 1px solid $gray;
                     border-radius: 6px;
                     padding: 14px 0px 14px 10px;
                     cursor: pointer;
@@ -71,12 +71,13 @@
                     &::placeholder {
                         font-family: $primary;
                         font-size: 14px;
-                        color: $black;
+                        font-weight: 400;
+                        color: $gray;
                         transition: all 0.2s ease;
                     }
                 }
                 textarea {
-                    border: 2px solid $gray;
+                    border: 1px solid $gray;
                     overflow-x: hidden;
                     border-radius: 6px;
                     width: 100%;
@@ -100,8 +101,8 @@
                     }
                     &::placeholder {
                         font-size: 14px;
-                        color: $black;
-                        font-weight: 500;
+                        color: $gray;
+                        font-weight: 400;
                         transition: all 0.2s ease;
                     }
                 }
@@ -109,8 +110,8 @@
                     background-color: $blue;
                     color: white;
                     font-size: 14px;
-                    border-radius: 6px;
-                    padding: 12px 50px;
+                    border-radius: 30px;
+                    padding: 9px 50px;
                     border: none;
                     margin-top: 20px;
                     transition: all 0.2s ease;
