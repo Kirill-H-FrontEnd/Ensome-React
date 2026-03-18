@@ -1,44 +1,81 @@
 @import "../../scss/vars";
+
 .headerPage {
-    padding: 200px 0px;
-    background-color: $bgGray;
+    padding: 120px 0 90px;
+    background: $bgGray;
+    position: relative;
+    overflow: hidden;
+
+    // subtle grid decoration
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba($blue, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba($blue, 0.04) 1px, transparent 1px);
+        background-size: 48px 48px;
+        pointer-events: none;
+    }
+
+    // blue accent bar at the bottom
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        border-radius: 2px 2px 0 0;
+        background: $blue;
+    }
+
     section {
+        position: relative;
+        z-index: 1;
         text-align: center;
-        text-transform: capitalize;
+
         h3 {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             color: $blue;
-            line-height: 1.3;
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 10px;
+            background: rgba($blue, 0.08);
+            border-radius: 20px;
+            padding: 5px 16px;
+            margin-bottom: 18px;
             opacity: 0;
-            transform: translate(0px, 30px);
-            animation: headerPage 0.5s ease forwards 0.2s;
+            transform: translateY(20px);
+            animation: headerPage 0.45s ease forwards 0.15s;
         }
+
         h2 {
-            line-height: 1.2;
-            font-size: 46px;
-            font-weight: 600;
+            font-size: 44px;
+            font-weight: 700;
             color: $black;
+            line-height: 1.2;
             text-align: center;
-            margin-bottom: 15px;
             opacity: 0;
-            transform: translate(0px, 30px);
-            animation: headerPage 0.5s ease forwards 0.4s;
+            transform: translateY(20px);
+            animation: headerPage 0.45s ease forwards 0.3s;
         }
     }
 }
 
 // ! Media
 @import "media.scss";
+
 // ! Key-Frames
 @keyframes headerPage {
     from {
         opacity: 0;
-        transform: translate(0px, 30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translate(0px, 0px);
+        transform: translateY(0);
     }
 }

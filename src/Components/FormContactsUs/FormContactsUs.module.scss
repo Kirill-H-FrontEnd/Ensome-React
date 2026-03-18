@@ -1,12 +1,16 @@
 @import "../../scss/vars";
+
 .contactsUsForm {
     padding: 100px 0px;
     background-color: $bgGray;
+
     .contactsUsInner {
         display: grid;
-        grid-template-columns: 540px 450px;
+        grid-template-columns: 520px 460px;
         justify-content: center;
-        grid-column-gap: 100px;
+        grid-column-gap: 80px;
+        align-items: start;
+
         &.active {
             section {
                 animation: secContactsUsAnim 0.5s ease forwards;
@@ -15,96 +19,114 @@
                 animation: formContactsUsAnim 0.5s ease forwards;
             }
         }
+
         section {
             opacity: 0;
             transform: translate(-50px, 0px);
+
             h4 {
-                font-size: 38px;
-                line-height: 56px;
+                font-size: 36px;
+                line-height: 52px;
                 color: $black;
                 font-weight: 700;
-                margin-bottom: 25px;
+                margin-bottom: 16px;
             }
             p {
                 color: $gray;
                 line-height: 28px;
-                margin-bottom: 50px;
+                margin-bottom: 40px;
+                font-size: 15px;
             }
             a {
                 display: none;
                 background-color: $blue;
                 color: white;
-                font-weight: 400;
+                font-weight: 500;
                 padding: 13px 0px;
                 text-align: center;
                 border-radius: 30px;
-                margin-top: 40px;
+                margin-top: 36px;
             }
+
             .contactsUsInfoContent {
                 display: grid;
-                grid-row-gap: 30px;
+                grid-row-gap: 16px;
+
                 div {
-                    display: grid;
-                    grid-row-gap: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    padding: 18px 20px;
+                    background: white;
+                    border-radius: 12px;
+                    border: 1px solid $borderGray;
+                    border-left: 4px solid $blue;
+                    box-shadow: 0 2px 12px rgba(29, 79, 254, 0.05);
+
                     span {
-                        color: $gray;
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.8px;
+                        color: $blue;
                     }
                     h5 {
                         color: $black;
-                        font-weight: 700;
-                        line-height: 1.3;
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 1.4;
                     }
                 }
             }
         }
+
         form {
             opacity: 0;
             transform: translate(50px, 0px);
             background-color: white;
-            box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
-            border-radius: 6px;
-            padding: 50px;
+            box-shadow: 0 8px 40px rgba(29, 79, 254, 0.08);
+            border-radius: 20px;
+            padding: 44px 40px;
+            border: 1px solid $borderGray;
+
             h4 {
                 font-size: $title2;
                 font-weight: 700;
                 color: $black;
-                margin-bottom: 30px;
+                margin-bottom: 28px;
             }
+
             .formInputs {
                 display: grid;
-                grid-row-gap: 30px;
-                input {
-                    border: none;
-                    border-bottom: 1px solid $gray;
-                    padding: 10px 0px 10px 5px;
-                    position: relative;
-                    cursor: pointer;
-                    text-transform: capitalize;
-                    font-weight: 500;
-                    color: $blue;
-                    transition: all 0.2s ease;
-                    &::placeholder {
-                        font-size: 14px;
-                        color: $gray;
+                grid-row-gap: 16px;
 
-                        letter-spacing: 1px;
-                        transition: all 0.2s ease;
-                    }
-                    &:hover {
-                        background-color: rgba($color: $gray, $alpha: 0.1);
+                input {
+                    border: 1.5px solid $borderGray;
+                    border-radius: 10px;
+                    padding: 12px 16px;
+                    font-size: 14px;
+                    color: $black;
+                    background: $bgGray;
+                    outline: none;
+                    transition:
+                        border-color 0.2s ease,
+                        background 0.2s ease;
+
+                    &::placeholder {
+                        color: $gray;
+                        letter-spacing: 0.3px;
                     }
                     &:focus {
                         border-color: $blue;
-                        &::placeholder {
-                            transform: translate(30px, 0px);
-                            opacity: 0;
-                        }
+                        background: white;
                     }
                 }
             }
+
             .formButton {
-                margin-top: 50px;
+                margin-top: 28px;
                 display: grid;
+
                 button {
                     @extend %button;
                 }
@@ -112,8 +134,10 @@
         }
     }
 }
+
 // ! Media
 @import "media.scss";
+
 // ! KeyFrames
 @keyframes secContactsUsAnim {
     from {

@@ -1,33 +1,39 @@
-// Styles
 import s from "../TodoApp.module.scss";
-// Hooks
 import React, { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
 interface TodoProps {
   onAdd(title: string): void;
 }
 
-export const TodoForm: React.FC<TodoProps> = (props) => {
+export const TodoForm: React.FC<TodoProps> = ({ onAdd }) => {
   const ref = useRef<HTMLInputElement>(null);
-  const keyPressHandler = (e: React.KeyboardEvent) => {
-    if (ref.current!.value !== "") {
-      if (e.key === "Enter") {
-        props.onAdd(ref.current!.value);
-        ref.current!.value = "";
-      }
+
+  const submit = () => {
+    if (ref.current && ref.current.value.trim() !== "") {
+      onAdd(ref.current.value.trim());
+      ref.current.value = "";
     }
   };
 
+  const keyPressHandler = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") submit();
+  };
+
   return (
-    <>
-      <div className={s.TodoForm}>
-        <input
-          name="text"
-          ref={ref}
-          onKeyPress={keyPressHandler}
-          type="text"
-          placeholder="Add new task"
-        />
-      </div>
-    </>
+    <div className={s.TodoForm}>
+      <input
+        name="text"
+        ref={ref}
+        onKeyPress={keyPressHandler}
+        type="text"
+        placeholder="Add a new task and press Enter…"
+      />
+      <button className={s.addBtn} onClick={submit}>
+        <FontAwesomeIcon icon={faPlus} />
+        Add
+      </button>
+    </div>
   );
 };

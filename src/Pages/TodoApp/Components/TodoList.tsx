@@ -1,9 +1,7 @@
-// Styles
 import s from "../TodoApp.module.scss";
 import { ITodo } from "Models/Todo";
-// Icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 interface TodoListProps {
   todos: ITodo[];
@@ -11,43 +9,62 @@ interface TodoListProps {
   onRemove(id: number): void;
 }
 
-export const TodoList: React.FC<TodoListProps> = ({
-  todos,
-  onRemove,
-  onToggle,
-}) => {
+const TodoList: React.FC<TodoListProps> = ({ todos, onRemove, onToggle }) => {
   if (todos.length === 0) {
-    return <p className={s.noTasks}>There's nothing here.</p>;
+    return (
+      <div className={s.noTasks}>
+        <span className={s.noTasksIcon}>📋</span>
+        <p>No tasks yet. Add one above!</p>
+      </div>
+    );
   }
+
+  const done = todos.filter((t) => t.completed).length;
+  const pct = Math.round((done / todos.length) * 100);
+
   return (
     <>
-      {todos.map((todo) => {
-        const classes = [`${s.TodoList}`];
-        if (todo.completed) {
-          classes.push(`${s.completed}`);
-        }
-        return (
-          <div className={classes.join(" ")} key={todo.id}>
-            <label className={`${s.togglerWrapper} ${s.style_1}`}>
+      <div className={s.statsBar}>
+        <p className={s.statsText}>
+          <span>{todos.length}</span> task{todos.length !== 1 ? "s" : ""} ·{" "}
+          <span>{done}</span> completed
+        </p>
+        <div className={s.statsProgress}>
+          <div className={s.statsProgressBar} style={{ width: `${pct}%` }} />
+        </div>
+      </div>
+
+      <div className={s.TodoList}>
+        {todos.map((todo) => (
+          <div
+            key={todo.id}
+            className={`${s.TodoItem} ${todo.completed ? s.completed : ""}`}
+          >
+            <label className={s.checkWrap}>
               <input
+                type="checkbox"
                 checked={todo.completed}
                 onChange={() => onToggle(todo.id)}
-                type="checkbox"
               />
-              <div className={s.togglerSlider}>
-                <div className={s.togglerKnob}>
-                  <span>
-                    <FontAwesomeIcon icon={faCheck} />
-                  </span>
-                </div>
+              <div className={s.checkBox}>
+                <FontAwesomeIcon icon={faCheck} />
               </div>
             </label>
-            <h1>{todo.title}</h1>
-            <button onClick={() => onRemove(todo.id)}>Delete</button>
+
+            <span className={s.taskTitle}>{todo.title}</span>
+
+            <button
+              className={s.deleteBtn}
+              onClick={() => onRemove(todo.id)}
+              title="Delete task"
+            >
+              <FontAwesomeIcon icon={faTrash} />
+            </button>
           </div>
-        );
-      })}
+        ))}
+      </div>
     </>
   );
 };
+
 export default TodoList;

@@ -1,94 +1,105 @@
-// Styles
 import s from "./TeamCard.module.scss";
-// Axios
-import axios from "axios";
-// Hooks
-import { useParams } from "react-router-dom";
-import { useQuery } from "react-query";
-// Components
+import { useNavigate, useParams } from "react-router-dom";
 import { HeaderPage } from "Components/HeaderPage/HeaderPage";
 import { FormSub } from "Components/FormSub/FormSub";
 import { TeamForm } from "./Components/Form/teamForm";
-import { Loader } from "Components/Loader/Loader";
-// FontAwrsome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { TEAM_CARDS } from "Data/staticData";
 
 export const TeamCard: React.FC = () => {
   const { name, id } = useParams();
+  const navigate = useNavigate();
 
-  const {
-    data: resp,
-    isError,
-    isLoading,
-    isSuccess,
-  } = useQuery("teamCard", () => fetchCardsTeam());
-  const DATA_URL = "http://localhost:3001";
-  axios.defaults.baseURL = DATA_URL;
-  const fetchCardsTeam = async () => {
-    return axios.get(`/team/${id}`);
-  };
-  // Arrays
-  const socialItem = [
-    { icon: faFacebookF, href: "https://ru-ru.facebook.com/" },
-    { icon: faTwitter, href: "https://twitter.com/" },
-    { icon: faInstagram, href: "https://www.instagram.com/" },
+  const card = TEAM_CARDS.find((c) => c.id === Number(id));
+
+  const socialItems = [
+    { icon: faFacebookF, href: "https://facebook.com/", label: "Facebook" },
+    { icon: faTwitter, href: "https://twitter.com/", label: "Twitter" },
+    { icon: faInstagram, href: "https://instagram.com/", label: "Instagram" },
   ];
-  console.log(document.querySelectorAll(" p * div "));
+
   return (
     <>
-      <HeaderPage title={name} supTitle={""} />
-      {isError && (
-        <p
-          style={{ textAlign: "center", padding: "20px 0px", color: "darkred" }}
-        >
-          Error!
-        </p>
-      )}
-      {isLoading && (
-        <div style={{ textAlign: "center", padding: "20px 0px" }}>
-          <Loader />
-        </div>
-      )}
-      {isSuccess && (
+      <HeaderPage
+        title={
+          card ? `${card.name.firstname} ${card.name.lastname}` : (name ?? "")
+        }
+        supTitle="Our Team"
+      />
+
+      {card ? (
         <section className={s.card}>
           <div className="box">
-            <section className={s.cardInner}>
-              <figure>
-                <img src={resp?.data.imgBig} alt="" />
-              </figure>
-              <section className={s.cardInfo}>
-                <div className={s.cardInfoItem}>
-                  <h5>Name</h5>
-                  <p>
-                    <span>{resp?.data.name.firstname}</span>
-                    <span> {resp?.data.name.lastname}</span>
-                  </p>
+            <div className={s.cardInner}>
+              {/* ── Left: photo + social ── */}
+              <div className={s.cardPhoto}>
+                <div className={s.cardPhotoImg}>
+                  <img src={card.imgBig} alt={card.name.firstname} />
                 </div>
-                <div className={s.cardInfoItem}>
-                  <h5>Email</h5>
-                  <p>{resp?.data.email}</p>
-                </div>
-                <div className={s.cardInfoItem}>
-                  <h5>Description</h5>
-                  <p>{resp?.data.description}</p>
-                </div>
-                <div className={s.cardInfoSocial}>
-                  {socialItem.map((item, i) => (
-                    <a target={"_blank"} key={i} href={item.href}>
+                <nav className={s.cardSocial}>
+                  {socialItems.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={item.label}
+                    >
                       <FontAwesomeIcon icon={item.icon} />
                     </a>
                   ))}
+                </nav>
+              </div>
+
+              {/* ── Right: profile info ── */}
+              <div className={s.cardProfile}>
+                <div className={s.cardProfileHeader}>
+                  <h1 className={s.cardProfileName}>
+                    {card.name.firstname} {card.name.lastname}
+                  </h1>
+                  <span className={s.cardProfileJob}>{card.job}</span>
                 </div>
-              </section>
-            </section>
+
+                <div className={s.cardInfoRows}>
+                  <div className={s.cardInfoRow}>
+                    <span className={s.cardInfoLabel}>Email</span>
+                    <span className={s.cardInfoValue}>{card.email}</span>
+                  </div>
+                  <div className={s.cardInfoRow}>
+                    <span className={s.cardInfoLabel}>Phone</span>
+                    <span className={s.cardInfoValue}>+{card.phone}</span>
+                  </div>
+                  <div className={s.cardInfoRow}>
+                    <span className={s.cardInfoLabel}>Position</span>
+                    <span className={s.cardInfoValue}>{card.job}</span>
+                  </div>
+                </div>
+
+                <div className={s.cardDescription}>
+                  <h5>About</h5>
+                  <p>{card.description}</p>
+                </div>
+
+                <button className={s.cardBackBtn} onClick={() => navigate(-1)}>
+                  <FontAwesomeIcon icon={faArrowLeft} />
+                  Back to team
+                </button>
+              </div>
+            </div>
           </div>
         </section>
+      ) : (
+        <p style={{ textAlign: "center", padding: "60px 0", color: "#9497a1" }}>
+          Team member not found.
+        </p>
       )}
+
       <TeamForm name={name} />
       <FormSub />
     </>

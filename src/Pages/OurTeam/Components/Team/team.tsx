@@ -1,8 +1,5 @@
-// Styles
 import s from "./OurTeam.module.scss";
-// Components
 import { Card } from "../Card/card";
-// Images
 import Header from "Images/OurTeamPage/headerImg.jpg";
 
 function Team() {
@@ -11,22 +8,18 @@ function Team() {
       <div className="box">
         <section className={s.teamInner}>
           <section className={s.teamHeader}>
-            <img src={Header} alt="" />
-            <section className={s.teamHeaderInfo}>
-              <p>
-                Phasellus tristique eu nisl eu consectetur. Morbi urna massa,
-                imperdiet in mauris et, euismod vestibulum lacus. Integer enim
-                elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis
-                lobortis eros. Fusce id commodo libero.
-              </p>
-              <p>
-                Phasellus tristique eu nisl eu consectetur. Morbi urna massa,
-                imperdiet in mauris et, euismod vestibulum lacus. Integer enim
-                elit, tincidunt aliquam ligula id, lacinia auctor orci. Sed quis
-                lobortis eros. Fusce id commodo libero.
-              </p>
-            </section>
+            <img src={Header} alt="Our team" />
+            <div className={s.teamHeaderOverlay}>
+              <div className={s.teamHeaderInfo}>
+                <h2>Meet the people behind Ensome</h2>
+                <p>
+                  We are a diverse team of designers, engineers and strategists
+                  united by a passion for great products and honest work.
+                </p>
+              </div>
+            </div>
           </section>
+
           <div className={s.teamCards}>
             <Card />
           </div>

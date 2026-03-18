@@ -1,313 +1,189 @@
 @import "../../../scss/vars";
+
+// ── Root ──────────────────────────────────────────────────────────────────────
 .footer {
-    padding: 50px 0px 0px 0px;
-    background-color: $bgGray;
+    background: white;
     border-top: 1px solid $borderGray;
-    .footerInner {
-        .footerLinks {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            justify-content: space-between;
-            border-bottom: 1px solid $borderGray;
-            padding-bottom: 40px;
-            .footerLogo {
-                transition: all 0.2s ease;
-                img {
-                    width: 120px;
-                    height: 40px;
-                }
-                &:hover {
-                    opacity: 0.8;
-                }
-            }
-            .footerPages {
-                display: grid;
-                grid-template-columns: repeat(3, auto);
-                grid-column-gap: 130px;
-                .footerPagesItem {
-                    h3 {
-                        font-weight: 500;
-                        font-size: 14px;
-                        color: $black;
-                        margin-bottom: 20px;
-                        svg {
-                            position: absolute;
-                            top: 50%;
-                            right: 10px;
-                            transform: translate(-0%, -50%) rotate(-90deg);
-                            display: none;
-                        }
-                        &.active {
-                            color: $blue;
-                            background-color: #c9dcec;
-                            svg {
-                                transform: translate(-0%, -50%) rotate(0deg);
-                                color: $blue;
-                            }
-                        }
-                    }
-                    nav {
-                        display: grid;
-                        grid-row-gap: 30px;
-                        &.active {
-                            display: grid;
-                        }
-                        a {
-                            font-size: 14px;
-                            color: $gray;
-                            transition: all 0.2s ease;
-                            position: relative;
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                left: -10px;
-                                transform: translate(0%, -50%);
-                                width: 4px;
-                                height: 4px;
-                                border-radius: 50%;
-                                background-color: $black;
-                                display: none;
-                            }
-                            &:hover {
-                                transform: translate(3px, 0px);
-                                color: $blue;
-                            }
-                            &.active {
-                                color: $blue;
-                            }
-                        }
-                    }
-                }
-                .szhAccordion {
-                    display: none;
-                    .accordion {
-                        h3 {
-                            border-bottom: 1px solid $borderGray;
-                            width: 100%;
-                            font-size: 16px;
-                            padding: 5px 0px 5px 0px;
-                            .accordionBtn {
-                                color: $black;
-                                padding: 10px 0px 10px 0px;
-                                font-weight: 500;
-                                width: 100%;
-                                text-align: left;
-                                border: none;
-                                background: transparent;
-                                position: relative;
-                                svg {
-                                    position: absolute;
-                                    top: 50%;
-                                    right: 20px;
-                                    transform: translate(0%, -50%) rotate(-90deg);
-                                    font-size: 14px;
-                                    transition: all 0.2s ease;
-                                }
-                            }
-                        }
-                        .accordionContent {
-                            transition: height 0.2s ease-in-out;
-                            .accordionPanel {
-                                display: grid;
-                                a {
-                                    font-size: 14px;
-                                    color: $gray;
-                                    font-weight: 500;
-                                    padding: 15px 0px 15px 0px;
-                                    transition: all 0.2s ease;
-                                    &.active {
-                                        color: $blue;
-                                    }
-                                }
-                                .footerInfoItem {
-                                    display: grid;
-                                    padding: 15px 0px 0px 0px;
-                                    span {
-                                        color: $black;
-                                        font-size: 14px;
-                                    }
-                                    a {
-                                        font-size: 14px;
-                                        font-weight: 600;
-                                        color: $black;
-                                        &:hover {
-                                            svg {
-                                                transform: translate(10px, 0px);
-                                            }
-                                        }
-                                        svg {
-                                            transform: translate(5px, 0px);
-                                            transition: all 0.2s ease;
-                                            font-size: 12px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .accordion {
-                        h3 {
-                            .accordionBtnExpanded {
-                                color: $blue;
-                                svg {
-                                    transform: translate(0%, -50%) rotate(0deg);
-                                    color: $blue;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .footerContacts {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            justify-content: space-between;
-            border-bottom: 1px solid $borderGray;
-            margin-bottom: 10px;
-            h3 {
-                position: relative;
-                font-weight: 600;
-                color: $black;
-                padding: 20px 10px 20px 10px;
-                &.active {
-                    color: $blue;
-                    background-color: #c9dcec;
-                    svg {
-                        transform: translate(-0%, -50%) rotate(0deg);
-                    }
-                }
-                svg {
-                    position: absolute;
-                    top: 50%;
-                    right: 10px;
-                    transform: translate(-0%, -50%) rotate(-90deg);
-                    display: none;
-                }
-            }
-            .footerInfo {
-                .footerInfoContent {
-                    display: grid;
-                    grid-template-columns: repeat(2, auto);
-                    grid-column-gap: 50px;
-                    padding: 15px 0px 15px 10px;
-                    .footerInfoItem {
-                        display: grid;
-                        grid-row-gap: 15px;
-                        span {
-                            color: $black;
-                            font-size: 14px;
-                        }
-                        a {
-                            font-size: 14px;
-                            font-weight: 500;
-                            color: $black;
-                            &:hover {
-                                svg {
-                                    transform: translate(10px, 0px);
-                                }
-                            }
-                            svg {
-                                transform: translate(5px, 0px);
-                                transition: all 0.2s ease;
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                }
-            }
-            .footerSocial {
-                nav {
-                    display: grid;
-                    grid-template-columns: repeat(6, auto);
-                    justify-content: start;
-                    grid-column-gap: 10px;
-                    a {
-                        border: 1px solid rgba($color: $blue, $alpha: 0.5);
-                        width: 35px;
-                        height: 35px;
-                        border-radius: 50%;
-                        background-color: $bgGray;
-                        position: relative;
-                        transition: all 0.2s ease;
-                        opacity: 0.5;
-                        overflow: hidden;
-                        &:hover {
-                            background-color: $blue;
-                            transform: translate(0px, -2px);
-                            opacity: 1;
-                            border-color: rgba($color: $blue, $alpha: 0);
-                            svg {
-                                color: white;
-                            }
-                            &:nth-of-type(1) {
-                                background-color: #0675e7;
-                            }
-                            &:nth-of-type(2) {
-                                background-color: #1ca1f1;
-                            }
-                            &:nth-of-type(3) {
-                                background-color: #fd8760;
-                            }
-                            &:nth-of-type(4) {
-                                background-color: #ff0000;
-                            }
-                            &:nth-of-type(5) {
-                                background-color: #0057ff;
-                            }
-                            &:nth-of-type(6) {
-                                background-color: #1ca1f1;
-                            }
-                        }
-                        &:active {
-                            box-shadow: inset 0px 0px 10px rgba($color: $black, $alpha: 0.2);
-                        }
-                        svg {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            color: $blue;
-                            font-size: 18px;
-                            transition: all 0.2s ease;
-                        }
-                    }
-                }
-            }
-        }
-        .footerCopyright {
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            justify-content: space-between;
-            padding: 40px 0px;
-            .footerCopyrightLinks {
-                display: grid;
-                grid-template-columns: repeat(2, auto);
-                justify-content: start;
-                grid-column-gap: 90px;
-                a {
-                    color: $gray;
-                    font-size: 14px;
-                    &:hover {
-                        svg {
-                            transform: translate(10px, 0px);
-                        }
-                    }
-                    svg {
-                        transition: all 0.2s ease;
-                        font-size: 12px;
-                        transform: translate(5px, 0px);
-                    }
-                }
-            }
-            pre {
-                font-size: 14px;
-                color: $gray;
-                font-family: $primary;
-            }
+    padding: 60px 0 0;
+}
+
+// ── Top row ───────────────────────────────────────────────────────────────────
+.footerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.footerLogo {
+    flex-shrink: 0;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    img {
+        height: 32px;
+        width: auto;
+    }
+}
+
+.footerTagline {
+    flex: 1;
+    font-size: 14px;
+    color: $gray;
+    padding: 0 24px;
+}
+
+// social icons
+.socialRow {
+    display: flex;
+    gap: 8px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid $borderGray;
+    color: $gray;
+    font-size: 14px;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+
+    &:hover {
+        background: $blue;
+        border-color: $blue;
+        color: white;
+        transform: translateY(-2px);
+    }
+}
+
+// ── Divider ───────────────────────────────────────────────────────────────────
+.divider {
+    height: 1px;
+    background: $borderGray;
+}
+
+// ── Nav grid ──────────────────────────────────────────────────────────────────
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 48px 0;
+}
+
+.footerCol {
+}
+
+.colTitle {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $black;
+    margin-bottom: 20px;
+}
+
+.colNav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.colLink {
+    font-size: 14px;
+    color: $gray;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+
+    &:hover {
+        color: $blue;
+        padding-left: 4px;
+    }
+
+    &.colLinkActive {
+        color: $blue;
+    }
+}
+
+// ── Contact list ──────────────────────────────────────────────────────────────
+.contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contactIcon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: rgba($blue, 0.08);
+    color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.contactValue {
+    font-size: 13px;
+    color: $gray;
+    line-height: 1.5;
+}
+
+// ── Bottom bar ────────────────────────────────────────────────────────────────
+.footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 16px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: $gray;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 28px;
+
+    a {
+        font-size: 13px;
+        color: $gray;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $blue;
         }
     }
 }
-// ! Media
+
+// ── Media ─────────────────────────────────────────────────────────────────────
 @import "media.scss";

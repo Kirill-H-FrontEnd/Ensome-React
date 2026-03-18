@@ -1,62 +1,186 @@
 @import "../../scss/vars";
+
 .card {
-    padding: 100px 0px;
+    padding: 80px 0 100px;
+
     .cardInner {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        grid-column-gap: 40px;
-        grid-row-gap: 50px;
-        figure {
-            text-align: right;
+        grid-template-columns: 380px 1fr;
+        gap: 48px;
+        align-items: start;
+    }
+}
+
+// ── Left column: photo + social ────────────────────────────────────────────────
+.cardPhoto {
+    position: sticky;
+    top: 100px;
+
+    .cardPhotoImg {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba($blue, 0.12);
+        aspect-ratio: 3 / 4;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-        .cardInfo {
-            max-width: 800px;
-            margin: 0 auto;
-            .cardInfoItem {
-                margin-bottom: 15px;
-                &:nth-of-type(1) {
-                    p {
-                        &:nth-of-type(1) {
-                            margin-bottom: 15px;
-                        }
-                    }
-                }
-                h5 {
-                    color: $blue;
-                    font-weight: 600;
-                    margin-bottom: 5px;
-                }
-                p {
-                    font-weight: 400;
-                    font-size: $text;
-                    text-transform: capitalize;
-                    line-height: 33px;
-                }
-            }
-            .cardInfoSocial {
-                display: grid;
-                grid-template-columns: repeat(3, auto);
-                justify-content: start;
-                grid-column-gap: 20px;
-                margin-bottom: 20px;
-                a {
-                    width: 30px;
-                    height: 30px;
-                    background-color: $blue;
-                    border-radius: 50%;
-                    position: relative;
-                    svg {
-                        color: white;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                }
+    }
+
+    .cardSocial {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $borderGray;
+            color: $gray;
+            font-size: 15px;
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.15s ease;
+
+            &:hover {
+                background: $blue;
+                border-color: $blue;
+                color: white;
+                transform: translateY(-2px);
             }
         }
     }
 }
+
+// ── Right column: info card ────────────────────────────────────────────────────
+.cardProfile {
+    .cardProfileHeader {
+        margin-bottom: 32px;
+
+        .cardProfileName {
+            font-size: 32px;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .cardProfileJob {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: $blue;
+            background: rgba($blue, 0.08);
+            border-radius: 100px;
+            padding: 5px 16px;
+        }
+    }
+
+    // info rows
+    .cardInfoRows {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border: 1px solid $borderGray;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 28px;
+
+        .cardInfoRow {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 16px;
+            align-items: center;
+            padding: 18px 24px;
+            border-bottom: 1px solid $borderGray;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .cardInfoLabel {
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $gray;
+            }
+
+            .cardInfoValue {
+                font-size: 15px;
+                color: $black;
+                font-weight: 500;
+                line-height: 1.5;
+                text-transform: none;
+            }
+        }
+    }
+
+    // description block
+    .cardDescription {
+        background: $bgGray;
+        border-radius: 16px;
+        padding: 28px;
+        margin-bottom: 32px;
+
+        h5 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $gray;
+            margin-bottom: 14px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $black;
+            line-height: 1.9;
+            font-weight: 400;
+        }
+    }
+
+    .cardBackBtn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: $blue;
+        color: white;
+        border: none;
+        border-radius: 100px;
+        padding: 13px 28px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+            background 0.2s ease,
+            transform 0.15s ease;
+
+        &:hover {
+            background: darken(#1d4ffe, 8%);
+            transform: translateY(-1px);
+        }
+
+        svg {
+            font-size: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover svg {
+            transform: translateX(-3px);
+        }
+    }
+}
+
 // ! Media
 @import "cardMedia.scss";

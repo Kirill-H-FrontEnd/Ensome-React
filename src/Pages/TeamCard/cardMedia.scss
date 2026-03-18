@@ -1,39 +1,52 @@
 @media screen and (max-width: 1024px) {
     .card {
         .cardInner {
-            grid-template-columns: auto;
-            justify-content: center;
-            figure {
-                text-align: center;
-                img {
-                    width: 100%;
-                    height: 0 auto;
-                }
-            }
-            .cardInfo {
-                text-align: center;
+            grid-template-columns: 300px 1fr;
+            gap: 32px;
+        }
+    }
+}
 
-                .cardInfoSocial {
-                    justify-content: center;
-                }
-            }
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 50px 0 70px;
+
+        .cardInner {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .cardPhoto {
+        position: static;
+        max-width: 340px;
+        margin: 0 auto;
+        width: 100%;
+
+        .cardSocial {
+            justify-content: center;
+        }
+    }
+
+    .cardProfile {
+        .cardProfileHeader .cardProfileName {
+            font-size: 26px;
+        }
+
+        .cardInfoRows .cardInfoRow {
+            grid-template-columns: 110px 1fr;
         }
     }
 }
 
 @media screen and (max-width: 530px) {
     .card {
-        padding: 50px 0px;
-        .card-inner {
-            .card-info {
-                width: 100%;
-                text-align: start;
-                #goBack {
-                    button {
-                        width: 100%;
-                    }
-                }
-            }
+        padding: 40px 0 60px;
+    }
+
+    .cardProfile {
+        .cardInfoRows .cardInfoRow {
+            grid-template-columns: 1fr;
+            gap: 4px;
         }
     }
 }
