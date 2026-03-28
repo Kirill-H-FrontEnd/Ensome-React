@@ -81,7 +81,7 @@ export const Intro: React.FC = () => {
           </section>
         </div>
         <section className={s.introCompanies}>
-          <Marquee className={s.marquee} speed={30} pauseOnHover={true}>
+          {/* <Marquee className={s.marquee} speed={30} pauseOnHover={true}>
             <div className={s.introMarquee}>
               {companiesImgs.map((img, i) => (
                 <a key={i} href="">
@@ -89,7 +89,7 @@ export const Intro: React.FC = () => {
                 </a>
               ))}
             </div>
-          </Marquee>
+          </Marquee> */}
         </section>
       </section>
     </>
