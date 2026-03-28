@@ -3,7 +3,7 @@ import s from "./Fitches.module.scss";
 // import Atropos component
 import Atropos from "atropos/react";
 // Swiper
-import { Pagination } from "swiper";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
