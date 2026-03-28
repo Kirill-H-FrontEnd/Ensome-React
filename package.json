@@ -26,7 +26,6 @@
     "concurrently": "^7.6.0",
     "framer-motion": "^8.5.0",
     "json-server": "^0.17.2",
-    "node-sass": "^8.0.0",
     "posthog-js": "^1.364.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
