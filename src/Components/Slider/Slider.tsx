@@ -1,6 +1,6 @@
 import { TComment } from "Models/comments";
 import s from "./Slider.module.scss";
-import { Pagination, A11y } from "swiper";
+import { Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
